@@ -15,7 +15,7 @@ const NavBar = ({breakpoint}) => {
                 <div className={`navbar-container ${breakpoint}`}>
                     <div className="navbar-logo-container">
                         <Link to='/'>
-                            <img className='navbar-logo' src={logo} alt='enarm-logo' />
+                            <img className='navbar-logo' src={logo} alt='enarm-logo' style={ breakpoint === 'small' ? {maxHeight: "80px", maxWidth: "80px"} : {maxHeight: "104px", maxWidth: "104px"}}/>
                         </Link>
                     </div>
                     <div className='sub-container'>
