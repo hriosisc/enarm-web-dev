@@ -1,0 +1,70 @@
+div.login { 
+    overflow-x: hidden;  
+    position: relative;
+    background: linear-gradient(180deg, #FFFFFF 42.12%, #E2ECF8 72.95%);
+} 
+
+div.login-container div.bg-container div.triangle {
+    background: #FFFFFF;
+    width: 100%;
+    height: 803.5px;
+    position: absolute;
+    z-index: 260;
+    clip-path: polygon(100% 44.5%, 0% 100%, 100% 100%);
+    bottom: -100px;
+} 
+
+div.login-container form div.form-group {
+    width: 100%;
+    height: auto;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+    margin-bottom: 16px;
+}
+ 
+div.login-container form div.form-group input[type=text],
+div.login-container form div.form-group input[type=password] {
+    width: 100%;
+    height: 56px;
+    border: 1px solid #96ACBC;
+    border-radius: 10px;
+    padding: 16px;
+}
+
+form div.form-group input[type=text]:focus,
+form div.form-group input[type=password]:focus {
+    outline: 2px solid #96ACBC;
+}
+
+div.login-container form div.form-group input::placeholder {
+    font-family: PoppinsRegular;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #96ACBC;
+}
+
+div.login-container form div.form-sub-group {
+    display: flex;
+    justify-content: space-between; 
+} 
+ 
+form div.sub-group div.checkbox input[type=checkbox] {
+    width: 16px;
+    height: 16px;
+}
+
+form div.sub-group div.checkbox label {
+    line-height: 21px;
+    position: relative;
+    top: -1px;
+}
+
+div.login-container form hr {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border: 1px solid #96ACBC;
+} 

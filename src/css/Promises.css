@@ -1,0 +1,58 @@
+div.promises { 
+    position: relative;    
+}
+ 
+div.promises-container-body {
+    display: flex;
+}
+
+div.promises-container-body div.image-container {
+    width: 708px;
+    height: 480px;
+    background: linear-gradient(270deg, #fff 16.85%, rgba(255, 255, 255, 0) 51.24%);
+    position: relative;
+}
+
+div.promises-container-body div.image-container img {
+    position: absolute;
+    z-index: -1;
+}  
+
+div.promises-subcontainer button {
+    border: none;
+    background: transparent;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+div.promises-subcontainer button i {
+    width: 28px;
+    font-size: 36px;
+    color: var(--sky-blue);position: relative;
+    left: 0px;
+    transition: left 350ms;
+}
+
+div.promises-subcontainer button span {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: #05B2FA;
+    display: block;
+    height: 22px;
+}
+
+div.promises-subcontainer button:hover span {
+    text-decoration-line: underline;    
+}
+
+div.promises-subcontainer button:hover i {
+    left: 10px;
+    transition: left 350ms;
+}
