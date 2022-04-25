@@ -1,4 +1,4 @@
-div.explore {
+/* div.explore {
     width: 100%; 
     display: block;
     position: relative; 
@@ -36,21 +36,7 @@ div.explore-form form div.form-group input {
     border: 1px solid #96ACBC;
     border-radius: 10px;
     padding: 1rem;
-}
-
-/* div.explore-form form div.whatsapp-input {
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 24px;
-    justify-content: space-between;
-    align-items: flex-start;
-}  */
-
-/* div.whatsapp-input div.form-group input[type=text] {
-    width: 100%;
-    height: 56px;
-} */
+} 
 
 div.explore-form form div.form-group input::placeholder {
     font-family: PoppinsRegular;
@@ -60,78 +46,68 @@ div.explore-form form div.form-group input::placeholder {
     font-size: 14px;
     line-height: 20px;
     font-style: normal;
+}  */
+
+/* SMARTPHONE RESPONSIVE BREAKPOINT */
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+    div.explore { width: 100%; display: block; background-color: var(--blue); }
+    div.explore div.explore-container { position: relative; display: block; width: 100%; padding: 0 24px; padding-bottom: 72px; }
+    div.explore-container-body { flex-direction: column; margin-top: 20px; gap: 40px }
+    div.explore-cards { display: flex; flex-direction: column; gap: 12px; }
+    div.card-item { display: flex; flex-flow: row nowrap; height: 135px!important; border: 2px solid var(--sky-blue); border-radius: 10px; justify-content: flex-start; align-items: center; }
+    div.card-item-icon { display: block; margin: 20px 16px 20px 20px; }
+    div.card-item-icon img { transform: scale(1); transition: transform 350ms; height: 70px; }
+    div.card-item-icon:hover img { transform: scale(1.20); transition: transform 350ms; }
+    div.card-item-text { height: 100%; display: flex; flex-flow: column; justify-content: space-between; padding-top: 20px; padding-bottom: 20px; padding-right: 21px; }
+    div.explore-form form { display: flex; flex-direction: column; }
+
+    div.explore-form form .form-group { display: flex; flex-direction: column; }
+    div.explore-form form .form-group input { width: 100%; height: 45px; border: 1px solid gray; border-radius: 8px; padding: 8px; }
+    div.explore-form form button[type=submit] { margin-top: 8px; }
 }
- 
-/* .explore-cards {
-    width: 588px;
-    height: 414px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-} */
-  
-/* .card-item {
-    display: flex;
-    flex-flow: row nowrap;
-    height: 130px;
-    width: 588px;
-    border: 2px solid var(--sky-blue);
-    border-radius: 10px;
-    justify-content: flex-start;
-    align-items: center; 
-    animation: cardSize 2s ease infinite alternate;
-} */
-  
-/* .card-item-text {
-    height: 100%;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    padding-top: 20px;
-    padding-bottom: 20px;
-} */
-  
-/* .card-item-icon {
-    width: 114px !important;
-    display: block; 
-} */
 
-/* .card-item-icon img {
-    transform: scale(1);
-    transition: transform 350ms;
-    height: 70px;
-} */
+/* TABLET RESPONSIVE BREAKPOINT */
+@media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) { 
+    div.explore div.explore-container { position: relative; display: block; width: 100%; padding: 0 25px; padding-bottom: 72px; }
+    div.explore-container-body {flex-direction: row; margin-top: 32px; gap: 20px; }
+    div.explore-cards { display: flex; flex-direction: column; gap: 28px; width: 50%; }
+    div.card-item { display: flex; flex-flow: row nowrap; height: 135px!important; border: 2px solid var(--sky-blue); border-radius: 10px; justify-content: flex-start; align-items: center; }
+    div.card-item-icon { display: block; margin: 20px 16px 20px 20px; }
+    div.card-item-icon img { transform: scale(1); transition: transform 350ms; height: 70px; }
+    div.card-item-icon:hover img { transform: scale(1.20); transition: transform 350ms; }
+    div.card-item-text { height: 100%; display: flex; flex-flow: column; justify-content: space-between; padding-top: 20px; padding-bottom: 20px; padding-right: 21px; }
+    div.explore-form { width: 50%; }
+    div.explore-form form { display: flex; flex-direction: column; }
+    div.explore-form form button[type=submit] { margin-top: 8px; }
+}
 
-/* .card-item-icon:hover img {
-    transform: scale(1.20);
-    transition: transform 350ms;
-} */
+/* SMALL SCREEENS RESPONSIVE BREAKPOINT */
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+        div.explore div.explore-container { position: relative; display: block; width: 100%; padding: 0 25px; padding-bottom: 72px; }
+        div.explore-container-body {flex-direction: row; margin-top: 32px; gap: 20px; }
+        div.explore-cards { display: flex; flex-direction: column; gap: 28px; width: 50%; }
+        div.card-item { display: flex; flex-flow: row nowrap; height: 135px!important; border: 2px solid var(--sky-blue); border-radius: 10px; justify-content: flex-start; align-items: center; }
+        div.card-item-icon { display: block; margin: 20px 16px 20px 20px; }
+        div.card-item-icon img { transform: scale(1); transition: transform 350ms; height: 70px; }
+        div.card-item-icon:hover img { transform: scale(1.20); transition: transform 350ms; }
+        div.card-item-text { height: 100%; display: flex; flex-flow: column; justify-content: space-between; padding-top: 20px; padding-bottom: 20px; padding-right: 21px; }
+        div.explore-form { width: 50%; }
+        div.explore-form form { display: flex; flex-direction: column; }
+        div.explore-form form button[type=submit] { margin-top: 8px; margin-left: auto; margin-right: auto; }
+    }
 
-
-/* .card-item-text > h1 {
-    display: block;
-    height: 26px;
-    width: 444px;
-    font-style: normal;
-    font-weight: 700;
-    color: white;
-    font-size: 16px;
-    line-height: 24px;
-} */
-  
-/* .card-item-text > p {
-    color: white;
-    text-align: start;
-    font-family: PoppinsRegular;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 24px;
-    display: block;
-    width: 444px;
-    height: 50px;
-} */
-
-/* @keyframes cardSize {
-    0% { height: 128px; width: 586px; }
-    100% { height: 134px; width: 596px; }
-} */
+/* PC/LAPTOP/EXTRA LARGE RESPONSIVE BREAKPOINT */
+@media screen and (min-width: 1024px)  {
+        div.explore { padding-top: 0px!important; padding-bottom: 100px!important; }
+        div.explore div.explore-container-head { margin-bottom: 84px; }
+        div.explore div.explore-container-body { display: flex; flex-direction: row-reverse; flex-wrap: nowrap; justify-content: space-between; }
+        div.explore div.explore-container-body div.explore-cards { width: 588px; height: 414px; }
+        div.explore div.explore-container-body div.explore-form { width: 486px; height: 414px; }
+        div.explore-form div.whatsapp-input { display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; gap: 20px; }
+        div.explore-form div.whatsapp-input button { position: relative; top: -8px; }
+        div.explore div.explore-container-body div.explore-form  form > button { position: relative; top: -8px; }
+        div.explore-cards { display: flex; flex-direction: column; gap: 12px; }
+        div.explore-cards div.card-item { display: flex; flex-direction: row; flex-wrap: nowrap; align-items: center; gap: 14px; border: 2px solid var(--sky-blue); border-radius: 10px; }
+        div.explore-cards div.card-item div.card-item-icon { width: 98px; }
+        div.explore-cards div.card-item div.card-item-text { display: flex; flex-direction: column; gap: 8px; }
+    }
