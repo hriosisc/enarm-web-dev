@@ -1,4 +1,4 @@
-nav.navbar { height: 100%; }
+/* nav.navbar { height: 100%; }
 
 div.navbar-container { 
     width: 100%;
@@ -21,6 +21,7 @@ div.navbar-container ul.session .button-menu {
 div.navbar-container ul.routes,
 div.navbar-container ul.actions {
     display: flex;
+    
     flex-direction: row;
     flex-wrap: nowrap;
     align-items: center; 
@@ -114,7 +115,7 @@ div.navbar-container ul li {
 
 .login-link.isSelected i {
     color: var(--sky-blue);
-}
+} */
 
  /*
 .login-link:hover span {
