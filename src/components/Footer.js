@@ -18,7 +18,7 @@ const Footer = ({ topLine, breakpoint }) => {
             { topLine && (<hr />)}
             <div className={`footer-container ${breakpoint}`}>
 
-                <img className='footer-enarm-logo' src={footerLogo} alt='footer-logo' />
+                <img className='footer-enarm-logo' src={footerLogo} alt='footer-logo' style={ breakpoint === 'small' ? {maxHeight: "104px", maxWidth: "104px"} : {maxHeight: "159px", maxWidth: "159px"}}/>
 
                 <div className='footer-enlaces'>
                     <div className='enlaces-left'>
