@@ -1,4 +1,4 @@
-/* div.explore {
+div.explore {
     width: 100%; 
     display: block;
     position: relative; 
@@ -36,7 +36,7 @@ div.explore-form form div.form-group input {
     border: 1px solid #96ACBC;
     border-radius: 10px;
     padding: 1rem;
-} */
+}
 
 /* div.explore-form form div.whatsapp-input {
     width: 100%;
@@ -52,7 +52,7 @@ div.explore-form form div.form-group input {
     height: 56px;
 } */
 
-/* div.explore-form form div.form-group input::placeholder {
+div.explore-form form div.form-group input::placeholder {
     font-family: PoppinsRegular;
     font-weight: 400;
     color: #96ACBC;
@@ -60,7 +60,7 @@ div.explore-form form div.form-group input {
     font-size: 14px;
     line-height: 20px;
     font-style: normal;
-} */
+}
  
 /* .explore-cards {
     width: 588px;
