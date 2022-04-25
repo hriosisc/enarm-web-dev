@@ -49,7 +49,6 @@ div.explore-form form div.form-group input::placeholder {
 }  */
 
 /* SMARTPHONE RESPONSIVE BREAKPOINT */
-@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
     div.explore { width: 100%; display: block; background-color: var(--blue); }
     div.explore div.explore-container { position: relative; display: block; width: 100%; padding: 0 24px; padding-bottom: 72px; }
     div.explore-container-body { flex-direction: column; margin-top: 20px; gap: 40px }
@@ -64,7 +63,7 @@ div.explore-form form div.form-group input::placeholder {
     div.explore-form form .form-group { display: flex; flex-direction: column; }
     div.explore-form form .form-group input { width: 100%; height: 45px; border: 1px solid gray; border-radius: 8px; padding: 8px; }
     div.explore-form form button[type=submit] { margin-top: 8px; }
-}
+
 
 /* TABLET RESPONSIVE BREAKPOINT */
 @media screen and (min-width: 481px) and (max-width: 768px) and (orientation: portrait) { 
