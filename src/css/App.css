@@ -80,7 +80,7 @@ body {
 .blue-link { font-family: MontserratBold; font-style: normal; font-weight: 800; font-size: 18px; line-height: 22px; letter-spacing: 0.02em; color: var(--sky-blue); }
 .white-link { font-family: MontserratBold; font-style: normal; font-weight: 800; font-size: 18px; line-height: 22px; letter-spacing: 0.02em; color: var(--white); }
 .button-text-white { font-family: MontserratBold; font-style: normal; font-weight: 700; font-size: 14px; line-height: 24px; letter-spacing: 0.02em; color: var(--white); }
-
+.italic { font-style: italic!important; }
 /* COLORS */
 .sky-blue { color: var(--sky-blue)!important; }
 .blue { color: var(--blue)!important; }
