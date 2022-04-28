@@ -20,7 +20,7 @@ const Layout = ({ children, topLine }) => {
             <main className={width} >
                 { children }
             </main>
-            <Footer topLine={topLine} size={width} ismobile={isMobile().toString()} />
+            <Footer topLine={topLine} size={width} />
             <Modal size={width} ismobile={isMobile().toString()} />
         </>
     )

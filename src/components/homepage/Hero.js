@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import '../../css/homepage/Hero.css';
 import doctorImage from '../../assets/imgs/Dres/hero_doctor.png';
 import logoHero from '../../assets/imgs/Logos_plata/logo-hero.png'; 
+import '../../css/homepage/Hero.css';
 
 const Hero = ({size, ismobile}) => {
 
@@ -41,7 +41,7 @@ const Hero = ({size, ismobile}) => {
  
     return (
         <div className={`hero ${size}`}>
-            { !mobileDevice && ( <div className='bg-rectangle'></div> ) }
+            { ["xl","xxl"].includes(size) && ( <div className='bg-rectangle'></div> ) }
             <div className='hero-container'>
                 <div className='description-container reveal-load'>
                     <h1 className={`hero-title ${ mobileDevice ? 'title text-center' : 'regular-47'}`}>

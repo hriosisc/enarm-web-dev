@@ -113,16 +113,22 @@ const NavBar = ({ size, ismobile }) => {
                                             >Contacto
                                         </NavLink>
                                     </li>
-                                    <li className={size}>
-                                        <NavLink 
-                                            className='navbar-link login-link' 
-                                            to='/iniciar_sesion' 
-                                            style={({ isActive }) => linkIsActive(isActive) }
-                                            >
-                                            <i className='material-icons-outlined'>account_circle</i>
-                                            <span className='regular-14'>Iniciar Sesión</span>
-                                        </NavLink>
-                                    </li>
+                                    {
+                                        mobileDevice ? (
+                                            <li className={size}>
+                                                <NavLink 
+                                                    className='navbar-link login-link' 
+                                                    to='/iniciar_sesion' 
+                                                    style={({ isActive }) => linkIsActive(isActive) }
+                                                    >
+                                                    <i className='material-icons-outlined'>account_circle</i>
+                                                    <span className='regular-14'>Iniciar Sesión</span>
+                                                </NavLink>
+                                            </li>
+                                        ) : (
+                                            <></>
+                                        )
+                                    }
                                 </ul>
                                 <ul className='actions'>
                                     <li className='get_course'>

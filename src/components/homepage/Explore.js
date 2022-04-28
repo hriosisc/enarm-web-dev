@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import iconDrStar from '../../assets/imgs/monis/PicsArt_09-18-11.18.png'
-import iconDrTablet from '../../assets/imgs/monis/PicsArt_09-18-11.21.png'
-import iconDrPencil from '../../assets/imgs/monis/PicsArt_09-21-10.28.png'
+import iconDrStar from '../../assets/imgs/monis/PicsArt_09-18-11.18.png';
+import iconDrTablet from '../../assets/imgs/monis/PicsArt_09-18-11.21.png';
+import iconDrPencil from '../../assets/imgs/monis/PicsArt_09-21-10.28.png';
 import '../../css/homepage/Explore.css';
 
 
@@ -40,9 +40,18 @@ const Explore = ({size, ismobile}) => {
                             </div>
                             <div className='card-item-text'>
                                 <h1 className='bold-14 white'>Primera ventaja</h1>
-                                <p className={mobileDevice? 'regular-14 white' : 'regular-16 white'}>
-                                    Esta tarjeta debería destacar detalles de la primer ventaja de obtener el Demo.
-                                </p>
+                                {
+                                    size === "md" ? (
+                                        <p className={'regular-14 white'} style={{ display: "block", width: "211px", height: "61px" }}>
+                                            Esta tarjeta debería destacar detalles de la segunda ventaja de obtener el Demo.
+                                        </p>
+
+                                    ) : (
+                                        <p className={`regular-${mobileDevice ? '14' : '16'} white`}>
+                                            Esta tarjeta debería destacar detalles de la segunda ventaja de obtener el Demo.
+                                        </p>
+                                    )
+                                }
                             </div>
                         </div>
                         <div className='card-item'>
@@ -51,20 +60,39 @@ const Explore = ({size, ismobile}) => {
                             </div>
                             <div className='card-item-text'>
                                 <h1 className='bold-14 white'>Segunda ventaja</h1>
-                                <p className={mobileDevice? 'regular-14 white' : 'regular-16 white'}>
-                                    Esta tarjeta debería destacar detalles de la segunda ventaja de obtener el Demo.
-                                </p>
+                                {
+                                    size === "md" ? (
+                                        <p className={'regular-14 white'} style={{ display: "block", width: "211px", height: "61px" }}>
+                                            Esta tarjeta debería destacar detalles de la segunda ventaja de obtener el Demo.
+                                        </p>
+
+                                    ) : (
+                                        <p className={`regular-${mobileDevice ? '14' : '16'} white`}>
+                                            Esta tarjeta debería destacar detalles de la segunda ventaja de obtener el Demo.
+                                        </p>
+                                    )
+                                }
                             </div>
                         </div>
                         <div className='card-item'>
                             <div className='card-item-icon'>
+
                                 <img className='doctor-icon' src={iconDrPencil} alt="icon-card" />
                             </div>
                             <div className='card-item-text'>
                                 <h1 className='bold-14 white'>Tercera ventaja</h1>
-                                <p className={mobileDevice? 'regular-14 white' : 'regular-16 white'}>
-                                    Esta tarjeta debería destacar detalles de la tercera ventaja de obtener el Demo.
-                                </p>
+                                {
+                                    size === "md" ? (
+                                        <p className={'regular-14 white'} style={{ display: "block", width: "211px", height: "61px" }}>
+                                            Esta tarjeta debería destacar detalles de la segunda ventaja de obtener el Demo.
+                                        </p>
+
+                                    ) : (
+                                        <p className={`regular-${mobileDevice ? '14' : '16'} white`}>
+                                            Esta tarjeta debería destacar detalles de la segunda ventaja de obtener el Demo.
+                                        </p>
+                                    )
+                                }
                             </div>
                         </div>
                     </div>
@@ -72,21 +100,21 @@ const Explore = ({size, ismobile}) => {
                         <form>
                             <div className='form-group'>
                                 <label className='medium-14 white' htmlFor='name'>Nombre completo*</label>
-                                <input type='text' placeholder='Nombre completo' name="name" inputMode='text'/>
+                                <input type='text' className="regular-14" placeholder='Nombre completo' name="name" inputMode='text'/>
                                 <span className="regular-14 red">Error Message...</span>
                             </div>
                             <div className='form-group'>
                                 <label className='medium-14 white' htmlFor="email">Correo electrónico*</label>
-                                <input type="text" placeholder='Tu correo electrónico' name="email" inputMode='email'/>
+                                <input type="text" className="regular-14" placeholder='Tu correo electrónico' name="email" inputMode='email'/>
                                 <span className="regular-14 red">Error Message...</span>
                             </div>
                             {
-                                mobileDevice? (
+                                mobileDevice ? (
                                     <>
                                         <div className='whatsapp-input'>
                                             <div className='form-group'>
                                                 <label className='medium-14 white' htmlFor="whatsapp">Whatsapp <i className='regular-14 italic'>(opcional)</i></label>
-                                                <input type="text" placeholder='Tu teléfono' name='whatsapp' inputMode='text'/>
+                                                <input type="text" className="regular-14" placeholder='Tu teléfono' name='whatsapp' inputMode='text'/>
                                                 <span className="regular-14 red">Error Message...</span>
                                             </div>
                                         </div>
@@ -98,7 +126,7 @@ const Explore = ({size, ismobile}) => {
                                     <div className='whatsapp-input'>
                                         <div className='form-group'>
                                             <label className='medium-14 white' htmlFor="whatsapp">Whatsapp <i>(opcional)</i></label>
-                                            <input type="text" placeholder='Tu numero de Whatsapp' name='whatsapp' inputMode='text'/>
+                                            <input type="text" className="regular-14" placeholder='Tu teléfono' name='whatsapp' inputMode='tel'/>
                                             <span className="regular-14 red">Error Message...</span>
                                         </div>
                                         <button className='button-rounded-blue-48' type='submit'>
