@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../../css/about_us/News.css';
 
@@ -40,16 +40,27 @@ const news_list = [
     },
 ]
 
-const News = ({width}) => {
+const News = ({ size, ismobile }) => {
 
+    const [mobileDevice, setMobileDevice] = useState(true);
     const [selected, setSelected] = useState(news_list);
 
+    useEffect(() =>{
+        const isMobileDevice = () =>{
+            if(ismobile === 'true') {
+                setMobileDevice(true)
+                return;
+            }
+            setMobileDevice(false);
+            return;
+        }
+
+        isMobileDevice();
+    }, [ismobile]);
+ 
     const collepsedParrafToggle = (ix) => {
-
         const parraf = selected[ix].parraf;
-
         if(selected[ix].isClicked) return parraf;
-
         return parraf.slice(0, 80).concat('...');
     }
 
@@ -60,11 +71,13 @@ const News = ({width}) => {
     }
 
     return (
-        <div className='news'>
-            <div className={`news-container ${width}`}>
+        <div className={`news ${size}`}>
+            <div className={`news-container`}>
                 <div className="container-head">
                     <h1 className='tiny-blue-title text-center'>NOVEDADES</h1>
-                    <h2 className='subtitle text-center'>Nuestro proposito es, que pases el ENARM en tú primer intento.</h2>
+                    <h2 className='subtitle text-center'>
+                        Nuestro proposito es, que pases el ENARM en tú primer intento.
+                    </h2>
                     <p className='regular-14 text-center'>Este año te ofrecemos una preparación radicalmente superior, totalmente actualizada y mejorada con nuevas herramientas y contenido, ya que nuestra meta es llegar a más del 85% de nuestros alumnos aprobados en su primer intento.</p>
                 </div>
                 <div className="container-body">
@@ -82,7 +95,7 @@ const News = ({width}) => {
                                             </div>
                                             <div className="item-body">
                                                 <p className='collapsed-parraf'>{ collepsedParrafToggle(index) }</p>
-                                                <Link to='#' onClick={() => toggleItemClick(index) }>{ selected[index].isClicked ? "Contraer" : "Expandir"}</Link>
+                                                <Link className='regular-14 gray' to='#' onClick={() => toggleItemClick(index) }>{ selected[index].isClicked ? "Contraer" : "Expandir"}</Link>
                                             </div>
                                         </div>
                                     </div>

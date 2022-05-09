@@ -114,7 +114,7 @@ const Explore = ({size, ismobile}) => {
                                         <div className='whatsapp-input'>
                                             <div className='form-group'>
                                                 <label className='medium-14 white' htmlFor="whatsapp">Whatsapp <i className='regular-14 italic'>(opcional)</i></label>
-                                                <input type="text" className="regular-14" placeholder='Tu teléfono' name='whatsapp' inputMode='text'/>
+                                                <input type="text" className="regular-14" placeholder='Tu teléfono' name='whatsapp' inputMode='tel' />
                                                 <span className="regular-14 red">Error Message...</span>
                                             </div>
                                         </div>

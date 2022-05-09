@@ -1,10 +1,5 @@
-div.login { 
-    overflow-x: hidden;  
-    position: relative;
-    background: linear-gradient(180deg, #FFFFFF 42.12%, #E2ECF8 72.95%);
-} 
-
-div.login-container div.bg-container div.triangle {
+div.login { overflow-x: hidden; position: relative; background: linear-gradient(180deg, #FFFFFF 42.12%, #E2ECF8 72.95%); padding: 60px 24px 0px 24px; } 
+/* div.login-container div.bg-container div.triangle {
     background: #FFFFFF;
     width: 100%;
     height: 803.5px;
@@ -12,59 +7,49 @@ div.login-container div.bg-container div.triangle {
     z-index: 260;
     clip-path: polygon(100% 44.5%, 0% 100%, 100% 100%);
     bottom: -100px;
+}  */
+
+div.login-container { margin: 0px auto; max-width: 428px; }
+div.login-container div.bg-container div.triangle { display: none; }
+div.login-container div.container-head { margin-bottom: 16px; }
+div.login-container div.form-container { margin-bottom: 72px; }
+div.login-container div.form-container form div.form-group { width: 100%; height: auto; min-height: 120px; display: flex; flex-direction: column; gap: 8px; margin-bottom: 16px; }
+div.login-container div.form-container form div.form-group input[type=text],
+div.login-container div.form-container form div.form-group input[type=password] { width: 100%; height: 56px; border: 1px solid #96ACBC; border-radius: 10px; padding: 16px; }
+div.login-container div.form-container form div.form-group input[type=text]:focus,
+div.login-container div.form-container form div.form-group input[type=password]:focus { outline: 2px solid #96ACBC; }
+div.login-container div.form-container form div.form-group input::placeholder { font-family: PoppinsRegular; font-style: normal; font-weight: 400; font-size: 14px; line-height: 20px; color: #96ACBC; }
+div.login-container div.form-container form div.form-group div.sub-group div.checkbox input[type=checkbox] { width: 16px; height: 16px; }
+div.login-container div.form-container form div.form-group div.sub-group div.checkbox label { line-height: 21px; position: relative; top: -1px; }
+div.login-container div.form-container form div.form-group div.sub-group { display: flex; flex-flow: row nowrap; justify-content: space-between; }
+div.login-container div.form-container form div.form-group div.sub-group div.checkbox { display: flex; gap: 4px; }
+div.login-container div.form-container form hr { margin-top: 40px; margin-bottom: 20px; border: 1px solid #96ACBC; } 
+div.login-container div.form-container form button { margin-top: 7px; }
+div.login-container div.image-container { margin: 0 auto; }
+div.login-container div.image-container img { display: block; position: relative; bottom: -4px; margin: 0 auto; }
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {   
+    div.login-container { max-width: 576px; margin: 0px auto; }
+
 } 
 
-div.login-container form div.form-group {
-    width: 100%;
-    height: auto;
-    min-height: 120px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px; 
-    margin-bottom: 16px;
-}
- 
-div.login-container form div.form-group input[type=text],
-div.login-container form div.form-group input[type=password] {
-    width: 100%;
-    height: 56px;
-    border: 1px solid #96ACBC;
-    border-radius: 10px;
-    padding: 16px;
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
 }
 
-form div.form-group input[type=text]:focus,
-form div.form-group input[type=password]:focus {
-    outline: 2px solid #96ACBC;
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) { 
+
 }
 
-div.login-container form div.form-group input::placeholder {
-    font-family: PoppinsRegular;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    color: #96ACBC;
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) and (max-width: 1399.98px){ 
+
 }
 
-div.login-container form div.form-sub-group {
-    display: flex;
-    justify-content: space-between; 
-} 
- 
-form div.sub-group div.checkbox input[type=checkbox] {
-    width: 16px;
-    height: 16px;
-}
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) { 
 
-form div.sub-group div.checkbox label {
-    line-height: 21px;
-    position: relative;
-    top: -1px;
 }
-
-div.login-container form hr {
-    margin-top: 40px;
-    margin-bottom: 20px;
-    border: 1px solid #96ACBC;
-} 

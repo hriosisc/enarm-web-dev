@@ -1,11 +1,27 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import whatsAppIcon from '../assets/icons/whatsapp-white.png';
 import telegramIcon from '../assets/icons/telegram-white.png';
 import messengerIcon from '../assets/icons/messenger-white.png';
 import '../css/ContactBanner.css';
 
-const ContactBanner = () => {
+const ContactBanner = ({ size, ismobile }) => {
+
+    const [mobileDevice, setMobileDevice] = useState(true);  
+
+    useEffect(() =>{
+        const isMobileDevice = () =>{
+            if(ismobile === 'true') {
+                setMobileDevice(true)
+                return;
+            }
+            setMobileDevice(false);
+            return;
+        }
+
+        isMobileDevice();
+    }, [ismobile]);
+
     return (
         <div className='contact-banner bg-blue'>
             <div className="contact-banner-container">

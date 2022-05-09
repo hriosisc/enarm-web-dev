@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../../css/contact/RegularQuestions.css';
 
@@ -50,17 +50,30 @@ const questions_list = [
     },
 ]
 
-const RegularQuestions = () => {
+const RegularQuestions = ({ size, ismobile }) => {
 
-    
+    const [mobileDevice, setMobileDevice] = useState(true);  
     const [selected, setSelected] = useState(questions_list);
+
+    useEffect(() =>{
+        const isMobileDevice = () =>{
+            if(ismobile === 'true') {
+                setMobileDevice(true)
+                return;
+            }
+            setMobileDevice(false);
+            return;
+        }
+
+        isMobileDevice();
+    }, [ismobile]);
+    
 
     const collepsedParrafToggle = (ix) => {
 
         const parraf = selected[ix].parraf;
 
         if(selected[ix].isClicked) return parraf;
-
         return parraf.slice(0, 80).concat('...');
     }
 
@@ -89,7 +102,7 @@ const RegularQuestions = () => {
                                             </div>
                                             <div className={`item-body ${selected[index].isClicked ? "flexed-column" : "flexed-row"}`}>
                                                 <p className={`collapsed-parraf`}>{ collepsedParrafToggle(index) }</p>
-                                                <Link to='#'  className='gray no-style' onClick={() => toggleItemClick(index) }>{ selected[index].isClicked ? "Contraer" : "Expandir"}</Link>
+                                                <Link to='#' className=' regular-14 text-right gray no-style' onClick={() => toggleItemClick(index) }>{ selected[index].isClicked ? "Contraer" : "Expandir"}</Link>
                                             </div>
                                         </div>
                                     </div>

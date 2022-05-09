@@ -92,8 +92,8 @@ const App = () => {
                     <Route path='/blog/:id' element={ <Layout topLine={true}><EntryDetailPage /></Layout> } />
                     <Route path='/prueba_gratis' element={ <Layout topLine={true}><FreeTestPage /></Layout> } />
                     <Route path='/contacto' element={ <Layout topLine={false}><ContactPage /></Layout> } />
-                    <Route path='/iniciar_sesion' element={ <AccessLayout><LoginPage /></AccessLayout> } />
-                    <Route path='/registrate' element={ <AccessLayout><RegisterPage /></AccessLayout> } />
+                    <Route path='/iniciar_sesion' element={ <AccessLayout><LoginPage size={screenSize} /></AccessLayout> } />
+                    <Route path='/registrate' element={ <AccessLayout><RegisterPage size={screenSize} /></AccessLayout> } />
                 </Routes>   
             </WidthContext.Provider>
         </>

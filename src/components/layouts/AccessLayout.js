@@ -1,19 +1,24 @@
 import React, { useContext } from 'react'
-import NavBar from '../NavBar'; 
+import NavBar from '../NavBar';
 import Modal from '../Modal';
 import WidthContext from '../../contexts/WidthContext';
 
 const AccessLayout = ({ children }) => {
-     
-    const width = useContext(WidthContext); 
+
+    const width = useContext(WidthContext);
+
+    const isMobile = () => {
+        if(['xs', 'sm', 'md'].includes(width)) return true;
+        if(['lg', 'xl', 'xxl'].includes(width)) return false;
+    }
 
     return (
         <>
-            <NavBar breakpoint={width} />
+            <NavBar width={width} ismobile={isMobile().toString()} />
             <main className={width}>
-                { children }      
+                { children }
             </main>
-            <Modal breakpoint={width}/>    
+            <Modal width={width} ismobile={isMobile().toString()} />
         </>
     )
 }

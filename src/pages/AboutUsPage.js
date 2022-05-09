@@ -9,17 +9,22 @@ import WidthContext from '../contexts/WidthContext';
 
 const AboutUsPage = () => {
  
-    const screenSize = useContext(WidthContext);
+    const size = useContext(WidthContext);
 
-    return (
-        <div className='layout-wrapper'>
-            <Hero2 width={screenSize}/>
-            <KnowUs width={screenSize}/>
-            <News width={screenSize}/>
-            <Facts width={screenSize}/>
-            <Stats width={screenSize}/>
-            <Promises width={screenSize}/>
-        </div>
+    const isMobile = () => {
+        if(['xs', 'sm', 'md'].includes(size)) return 'true';
+        if(['lg', 'xl', 'xxl'].includes(size)) return 'false';
+    } 
+
+    return ( 
+        <>
+            <Hero2 size={size} ismobile={isMobile().toString()} />
+            <KnowUs size={size} ismobile={isMobile().toString()} />
+            <News size={size} ismobile={isMobile().toString()} />
+            <Facts size={size} ismobile={isMobile().toString()} />
+            <Stats size={size} ismobile={isMobile().toString()} />
+            <Promises size={size} ismobile={isMobile().toString()} /> 
+        </>
     )
 }
 
