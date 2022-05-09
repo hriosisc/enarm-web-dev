@@ -5,20 +5,20 @@ import WidthContext from '../../contexts/WidthContext';
 
 const AccessLayout = ({ children }) => {
 
-    const width = useContext(WidthContext);
+    const size = useContext(WidthContext);
 
     const isMobile = () => {
-        if(['xs', 'sm', 'md'].includes(width)) return true;
-        if(['lg', 'xl', 'xxl'].includes(width)) return false;
+        if(['xs', 'sm', 'md'].includes(size)) return true;
+        if(['lg', 'xl', 'xxl'].includes(size)) return false;
     }
 
     return (
         <>
-            <NavBar width={width} ismobile={isMobile().toString()} />
-            <main className={width}>
+            <NavBar size={size} ismobile={isMobile().toString()} />
+            <main className={size}>
                 { children }
             </main>
-            <Modal width={width} ismobile={isMobile().toString()} />
+            <Modal size={size} ismobile={isMobile().toString()} />
         </>
     )
 }

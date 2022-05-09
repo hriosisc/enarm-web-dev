@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom'; 
 import doctorImage from '../assets/imgs/Dres/stock-photo-surgeon-wearing-blue-uniform-stethoscope-small.png'; 
+import WidthContext from '../contexts/WidthContext';
 import '../css/LoginPage.css';
 
-const LoginPage = ({ size }) => {
+const LoginPage = () => {
 
     setTimeout(() => {
         const items = document.querySelectorAll(".reveal-load");
@@ -12,6 +13,8 @@ const LoginPage = ({ size }) => {
         })
     }, 100);
 
+    const size = useContext(WidthContext);
+
     const isMobile = () => {
         if(['xs', 'sm', 'md'].includes(size)) return true;
         if(['lg', 'xl', 'xxl'].includes(size)) return false;
@@ -19,18 +22,31 @@ const LoginPage = ({ size }) => {
  
     return (
         <div className='login'>
-            <div className="login-container">
-                <div className="bg-container"> 
+            <div className="login-container">   
+            { !isMobile() ? (
+                <>
+                    <div className='__container'>
+                        <div className="container-head">
+                            <h1 className="title text-center">¡Bienvenido de nuevo!</h1>
+                        </div>
+                        <div className="container-body">  
+                            <FormLogin size={size} mobile={isMobile()}/>
+                        </div>
+                    </div>
+                    <div className="image-container"> <img src={doctorImage} alt="doctor-pic" /> </div>
                     <div className="triangle"></div> 
-                </div>
-                <div className="container-head">
-                    <h1 className="title text-center">¡Bienvenido de nuevo!</h1>
-                </div>
-                <div className="container-body">  
-                    <FormLogin size={size} mobile={isMobile()}/>
-                    { isMobile() && ( <div className="image-container"> <img src={doctorImage} alt="doctor-pic" /> </div> )}
-                </div>
-                { !isMobile() && ( <div className="image-container"> <img src={doctorImage} alt="doctor-pic" /> </div> )}
+                </>
+            ) : ( 
+                <>
+                    <div className="container-head">
+                        <h1 className="title text-center">¡Bienvenido de nuevo!</h1>
+                    </div>
+                    <div className="container-body">  
+                        <FormLogin size={size} mobile={isMobile()}/>                    
+                    </div>
+                    <div className="image-container"> <img src={doctorImage} alt="doctor-pic" /> </div>                
+                </>
+            ) } 
             </div>
         </div>
     )
@@ -57,7 +73,7 @@ const FormLogin = ({ size }) => {
             <form method='POST' onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label className={fontSizeClass('medium')} htmlFor="form-user">Usuario o Correo electrónico*</label>
-                    <input type="text" name="user" id="form-user"  placeholder='Tu usuario o corréo electrónico'/>
+                    <input type="text" name="user" id="form-user" placeholder='Tu usuario o corréo electrónico'/>
                     <span className={`${fontSizeClass('regular')} red`}>Error message...</span>
                 </div>
                 <div className="form-group">

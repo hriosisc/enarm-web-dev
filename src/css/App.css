@@ -269,3 +269,7 @@ to  {
     60% {-webkit-transform: translateY(-15px);} 
     } 
  
+input[type=text],
+input[type=tel],
+input[type=password],
+input[type=email] { font-family: PoppinsRegular; font-style: normal; font-weight: 400; font-size: 14px; line-height: 20px; color: #96ACBC; }
