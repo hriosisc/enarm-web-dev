@@ -101,7 +101,7 @@ const Explore = ({size, ismobile}) => {
                         </div>
                     </div>
                     <div className='explore-form'>
-                        <form method='POST' onSubmit={handleSubmit()}>
+                        <form method='POST' onSubmit={handleSubmit}>
                             <div className='form-group'>
                                 <label className='medium-14 white' htmlFor='name'>Nombre completo*</label>
                                 <input type='text' className="regular-14" placeholder='Nombre completo' name="name" inputMode='text'/>

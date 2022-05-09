@@ -28,7 +28,7 @@ const RegisterPage = ({width}) => {
                 </div>
                 <div className="container-body">  
                     <div className="form-container reveal-load">
-                        <form method='POST' onSubmit={handleSubmit()}>
+                        <form method='POST' onSubmit={handleSubmit}>
                             <div className="form-group">
                                 <label className='medium-14' htmlFor="form-user">Correo electrónico*</label>
                                 <input type="text" name="user" id="form-user"  placeholder='Tu usuario o corréo electrónico'/>

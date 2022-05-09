@@ -142,7 +142,7 @@ const ContactForm  = ({size}) => {
     }
 
     return (
-        <form method='POST' onSubmit={handleSubmit()}>
+        <form method='POST' onSubmit={handleSubmit}>
             <div className="form-group">
                 <label className={ fontClass() } htmlFor="name">Nombre completo*</label>
                 <input type="text" placeholder='Nombre completo' name="name" id="contact-message-name" />

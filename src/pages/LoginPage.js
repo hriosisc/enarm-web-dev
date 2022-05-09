@@ -54,7 +54,7 @@ const FormLogin = ({ size }) => {
 
     return (
         <div className="form-container reveal-load">
-            <form method='POST' onSubmit={handleSubmit()}>
+            <form method='POST' onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label className={fontSizeClass('medium')} htmlFor="form-user">Usuario o Correo electrónico*</label>
                     <input type="text" name="user" id="form-user"  placeholder='Tu usuario o corréo electrónico'/>
