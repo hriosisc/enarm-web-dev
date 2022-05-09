@@ -28,7 +28,7 @@ const RegisterPage = ({width}) => {
                 </div>
                 <div className="container-body">  
                     <div className="form-container reveal-load">
-                        <form method='POST'>
+                        <form method='POST' onSubmit={handleSubmit()}>
                             <div className="form-group">
                                 <label className='medium-14' htmlFor="form-user">Correo electrónico*</label>
                                 <input type="text" name="user" id="form-user"  placeholder='Tu usuario o corréo electrónico'/>
@@ -39,7 +39,7 @@ const RegisterPage = ({width}) => {
                                 <input type="password" name="password" id="form-password"  placeholder='Tu contraseña'/>
                                 <span className='regular-14 red'>Error message</span>
                             </div> 
-                            <button className='button-rounded-blue-48' type="submit" onClick={handleSubmit}>
+                            <button className='button-rounded-blue-48' type="submit">
                                 <span className="button-text">
                                     Registrar
                                 </span>
@@ -71,4 +71,4 @@ const RegisterPage = ({width}) => {
     )
 }
 
-export default RegisterPage
+export default RegisterPage;

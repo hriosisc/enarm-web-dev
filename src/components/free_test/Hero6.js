@@ -30,6 +30,11 @@ const Hero6 = ({ size, ismobile }) => {
         body.scrollTop = 0;
     }, 100);
 
+    
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
     return (
         <div className='hero-6' >
             <div className="triangle"></div>
@@ -46,7 +51,7 @@ const Hero6 = ({ size, ismobile }) => {
                 </div>
                 <div className="hero-6-container-body">                    
                     <div className='hero-6-form'>
-                        <form className='reveal-load'>
+                        <form className='reveal-load' method='POST' onSubmit={handleSubmit()}>
                             <div className='form-group'>
                                 <label className='medium-14' htmlFor='name'>Nombre completo*</label>
                                 <input type='text' placeholder='Nombre completo' name="name" inputMode='text'/>

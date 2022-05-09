@@ -137,8 +137,12 @@ const ContactForm  = ({size}) => {
         return ['xl', 'xxl'].includes(size) ? 'medium-16' : 'medium-14';
     }
 
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
     return (
-        <form method='POST'>
+        <form method='POST' onSubmit={handleSubmit()}>
             <div className="form-group">
                 <label className={ fontClass() } htmlFor="name">Nombre completo*</label>
                 <input type="text" placeholder='Nombre completo' name="name" id="contact-message-name" />

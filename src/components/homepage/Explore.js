@@ -23,6 +23,11 @@ const Explore = ({size, ismobile}) => {
         isMobileDevice();
     }, [ismobile]);
 
+    
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
     return (
         <div className={`explore ${size}`}>
             <div className='explore-container'>
@@ -76,7 +81,6 @@ const Explore = ({size, ismobile}) => {
                         </div>
                         <div className='card-item'>
                             <div className='card-item-icon'>
-
                                 <img className='doctor-icon' src={iconDrPencil} alt="icon-card" />
                             </div>
                             <div className='card-item-text'>
@@ -97,7 +101,7 @@ const Explore = ({size, ismobile}) => {
                         </div>
                     </div>
                     <div className='explore-form'>
-                        <form>
+                        <form method='POST' onSubmit={handleSubmit()}>
                             <div className='form-group'>
                                 <label className='medium-14 white' htmlFor='name'>Nombre completo*</label>
                                 <input type='text' className="regular-14" placeholder='Nombre completo' name="name" inputMode='text'/>

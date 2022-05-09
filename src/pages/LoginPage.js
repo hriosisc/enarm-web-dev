@@ -50,12 +50,11 @@ const FormLogin = ({ size }) => {
     const fontSizeClass = (type) => {
         const fontSizePixels = isMobile() === true ? '14' : '16';
         return `${type}-${fontSizePixels}`;
-
     }
 
     return (
         <div className="form-container reveal-load">
-            <form method='POST'>
+            <form method='POST' onSubmit={handleSubmit()}>
                 <div className="form-group">
                     <label className={fontSizeClass('medium')} htmlFor="form-user">Usuario o Correo electrónico*</label>
                     <input type="text" name="user" id="form-user"  placeholder='Tu usuario o corréo electrónico'/>
@@ -73,7 +72,7 @@ const FormLogin = ({ size }) => {
                         </div>
                     </div> 
                 </div>
-                <button className='button-rounded-blue-48' type="submit" onClick={handleSubmit}>
+                <button className='button-rounded-blue-48' type="submit">
                     <span className="button-text">
                         Iniciar Sesión
                     </span>
