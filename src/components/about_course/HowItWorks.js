@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'; 
+import React, { useState, useEffect } from 'react';
 import vectorLineSmall from '../../assets/imgs/monis/vector_line_small.png';
 import vectorLineMedium from '../../assets/imgs/monis/vector_line_medium.png';
 import vectorLine from '../../assets/imgs/monis/vector_line.png';
@@ -9,51 +9,51 @@ import halfBookImg from '../../assets/imgs/monis/half-book.png';
 import halfStarImg from '../../assets/imgs/monis/half-star.png';
 import drWalking from '../../assets/imgs/monis/PicsArt_09-18-11.11.55.png';
 import halfDr from '../../assets/imgs/monis/half-doctpr.png';
-import '../../css/about_course/HowItWorks.css'; 
+import '../../css/about_course/HowItWorks.css';
 
 const cards_list = [
     {
-        title: 'Resúmenes ENARM',
-        parraf: 'El Resúmen te mostrará a fondo la patología que desees estudiar, lo que te permitirá una compresión al día y completa del tema.'
+        title: 'Video clases',
+        parraf: 'El contenido de cada una de las video clases abarcará los temas más preguntados en el ENARM.'
     },
     {
-        title: 'Mini Resúmenes ENARM',
-        parraf: 'El mini resúmen te ahorrará tiempo de estudio, quitandote toda la paja hasta dejarte con lo más importante de cada patología.'
+        title: 'Libros de consulta',
+        parraf: 'Tenemos la más amplia gama de libros de consulta basados en la literatura médica.'
     },
     {
-        title: 'Mini Resúmenes ENARM',
-        parraf: 'El mini resúmen te quitará todo el ruido hasta dejarte con lo más importante de cada patología.'
+        title: 'Resúmenes',
+        parraf: 'El Resumen te mostrará a fondo la patología que desees estudiar, lo que te permitirá una compresión completa del tema.'
     },
     {
-        title: 'Mini Resúmenes ENARM',
-        parraf: 'El mini resúmen te quitará todo el ruido hasta dejarte con lo más importante de cada patología.'
+        title: 'Mini resúmenes',
+        parraf: 'Te ahorrará tiempo de estudio, quitando toda la paja hasta dejar lo más importante y relevante de cada patología.'
     },
     {
-        title: 'Mini Resúmenes ENARM',
-        parraf: 'El mini resúmen te quitará todo el ruido hasta dejarte con lo más importante de cada patología.'
+        title: 'Flash Cards',
+        parraf: 'Encontrarás lo más relevante de cada tema sintetizada en una sola imagen.'
     },
     {
-        title: 'Mini Resúmenes ENARM',
-        parraf: 'El mini resúmen te quitará todo el ruido hasta dejarte con lo más importante de cada patología.'
+        title: 'Cuadros comparativos',
+        parraf: 'Estos cuadros te ayudarán a comparar y diferenciar dos o más patologías relacionadas en un caso clínico.'
     },
     {
-        title: 'Mini Resúmenes ENARM',
-        parraf: 'El mini resúmen te quitará todo el ruido hasta dejarte con lo más importante de cada patología.'
+        title: 'Diagramas de flujo',
+        parraf: 'Correlaciona diferentes temas y patologías que llevan un seguimiento para llegar a un resultado.'
     },
     {
-        title: 'Mini Resúmenes ENARM',
-        parraf: 'El mini resúmen te quitará todo el ruido hasta dejarte con lo más importante de cada patología.'
+        title: 'Tips ENARM',
+        parraf: 'Estos Tips te mostrarán de forma divertida los puntos más preguntados en el ENARM..'
     },
     {
-        title: 'Mini Resúmenes ENARM',
-        parraf: 'El mini resúmen te quitará todo el ruido hasta dejarte con lo más importante de cada patología.'
+        title: 'E-book intensivo',
+        parraf: 'Realiza tu repaso intensivo con los temas de cada especialidad más preguntados en tu examen.'
     },
     {
-        title: 'Mini Resúmenes ENARM',
-        parraf: 'El mini resúmen te quitará todo el ruido hasta dejarte con lo más importante de cada patología.'
+        title: 'Simuladores ENARM',
+        parraf: 'Con nuestros simuladores, puedes practicar cada una de las especialidades que repasaste en tu plataforma con el formato más parecido al ENARM.'
     },
 ];
-  
+
 
 const HowItWorks = ({ size, ismobile }) =>{
 
@@ -71,19 +71,19 @@ const HowItWorks = ({ size, ismobile }) =>{
 
         isMobileDevice();
     }, [ismobile]);
- 
+
 
     const imageSource = () => {
         if(size === 'sm' || size === 'xs') return vectorLineSmall;
-        if(size === 'md' || size === 'lg') return vectorLineMedium; 
+        if(size === 'md' || size === 'lg') return vectorLineMedium;
         return vectorLine;
     }
-    
+
     const tabletDeviceIcons = (idx) => {
         if(idx === 0) return ( <img className='hiw-icon icon-4 reveal' src={drWalking} alt="drWalking" /> )
         if(idx === 2) return (
             <>
-                <img className='hiw-icon icon-5 reveal' src={halfDr} alt="halfDr" />                                            
+                <img className='hiw-icon icon-5 reveal' src={halfDr} alt="halfDr" />
                 <img className='hiw-icon icon-2 reveal' src={bookImg} alt="bookImg" />
             </>
         )
@@ -133,8 +133,8 @@ const HowItWorks = ({ size, ismobile }) =>{
                                     </div>
                                 )
                             })
-                        } 
-                    </div>  
+                        }
+                    </div>
                     { ['xs','sm'].includes(size) && (
                         <>
                             <img className='hiw-icon icon-4 reveal' src={drWalking} alt="drWalking" />
@@ -143,8 +143,8 @@ const HowItWorks = ({ size, ismobile }) =>{
                             <img className='hiw-icon icon-3 reveal' src={halfStarImg} alt="star" />
                         </>
                     )}
-                </div> 
-            </div>            
+                </div>
+            </div>
         </div>
     )
 }

@@ -11,6 +11,7 @@ div.news-items div.item div.item-body { display: flex; flex-direction: column; g
 div.news-items div.item div.item-body p { line-height: 21px; }
 div.news-items div.item.isSelected div.item-body p { line-height: 24px!important; transition: line-height 350ms; }
 div.news-items div.item div.item-body a { text-align: end; }
+ul.new-content li { margin-left: 24px; }
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {   
