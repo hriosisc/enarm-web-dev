@@ -17,13 +17,13 @@ const FreeTestPage = () => {
 
     return ( 
         <>
-            <Hero6 size={size} ismobile={isMobile().toString()} />
+            <Hero6 size={size} />
             <AreYouReady size={size} ismobile={isMobile().toString()} />
             <ContactBanner size={size} ismobile={isMobile().toString()} />
-            <Advantages size={size} ismobile={isMobile().toString()} /> 
+            <Advantages size={size} /> 
             <Discount size={size} ismobile={isMobile().toString()} />
         </>
     )
 }
 
-export default FreeTestPage
+export default FreeTestPage;

@@ -17,8 +17,8 @@ const ContactPage = () => {
     return (
         <div className='layout-wrapper'>
             <Hero7 size={size} ismobile={isMobile().toString()} />
-            <RegularQuestions size={size} ismobile={isMobile().toString()} />
-            <ContactBanner size={size} ismobile={isMobile().toString()} />
+            <RegularQuestions size={size} />
+            <ContactBanner size={size} />
         </div>
     )
 }

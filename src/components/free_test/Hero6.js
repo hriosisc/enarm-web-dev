@@ -1,24 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import imageDoctor from '../../assets/imgs/Dres/stock-photo-handsome-doctor-showing-thumb-smiling-small.png';
 import imageDoctorXL from '../../assets/imgs/Dres/stock-photo-handsome-doctor-showing-thumb-smiling-true.png';  
 import '../../css/free_test/Hero6.css';
 
-const Hero6 = ({ size, ismobile }) => {
-
-    const [mobileDevice, setMobileDevice] = useState(true);  
-
-    useEffect(() =>{
-        const isMobileDevice = () =>{
-            if(ismobile === 'true') {
-                setMobileDevice(true)
-                return;
-            }
-            setMobileDevice(false);
-            return;
-        }
-
-        isMobileDevice();
-    }, [ismobile]);
+const Hero6 = ({ size }) => { 
 
     setTimeout(() => {
         const items = document.querySelectorAll(".reveal-load");

@@ -1,23 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../../css/about_us/Stats.css';
 
-const Stats = ({ size, ismobile }) => {
+const Stats = ({ size }) => { 
 
-    const [mobileDevice, setMobileDevice] = useState(true); 
-
-    useEffect(() =>{
-        const isMobileDevice = () =>{
-            if(ismobile === 'true') {
-                setMobileDevice(true)
-                return;
-            }
-            setMobileDevice(false);
-            return;
-        }
-
-        isMobileDevice();
-    }, [ismobile]);
- 
     const stats_list = [
         { class: "special-stat", statValue: "26", statName: "ESPECIALIDADES" },
         { class: "mini-resume-stat", statValue: "360", statName: "MINI RESÚMENES" },
@@ -26,6 +11,7 @@ const Stats = ({ size, ismobile }) => {
         { class: "resumes", statValue: "400", statName: "RESÚMENES" },
         { class: "aceptation-percentage-stat", statValue: "83%", statName: "PORCENTAJE DE ACEPTACION REAL" }
     ]
+
     return (
         <div className='stats'>
             <div className="stats-container">

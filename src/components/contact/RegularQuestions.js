@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../../css/contact/RegularQuestions.css';
 
@@ -50,25 +50,9 @@ const questions_list = [
     },
 ]
 
-const RegularQuestions = ({ size, ismobile }) => {
-
-    const [mobileDevice, setMobileDevice] = useState(true);  
-    const [selected, setSelected] = useState(questions_list);
-
-    useEffect(() =>{
-        const isMobileDevice = () =>{
-            if(ismobile === 'true') {
-                setMobileDevice(true)
-                return;
-            }
-            setMobileDevice(false);
-            return;
-        }
-
-        isMobileDevice();
-    }, [ismobile]);
-    
-
+const RegularQuestions = ({ size }) => {
+ 
+    const [selected, setSelected] = useState(questions_list); 
     const collepsedParrafToggle = (ix) => {
 
         const parraf = selected[ix].parraf;

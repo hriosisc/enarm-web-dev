@@ -17,7 +17,7 @@ const BlogEntriesPage = () => {
         <>
             <Hero4 size={size} ismobile={isMobile().toString()} />
             <ContentsEntries size={size} ismobile={isMobile().toString()} />
-            <Promises size={size} ismobile={isMobile().toString()} />
+            <Promises size={size} />
         </>
     )
 }

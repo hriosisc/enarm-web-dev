@@ -21,7 +21,11 @@ div.hero-7-container div.form-container form button { margin-top: 16px; }
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {   
-
+    div.hero-7-container div.__container {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+      }
 } 
 
 /* // Medium devices (tablets, 768px and up) */
@@ -31,7 +35,8 @@ div.hero-7-container div.form-container form button { margin-top: 16px; }
     div.hero-7-container div.container-header > h1 { letter-spacing: 0.03em; max-width: 515px; }
     div.hero-7-container div.container-body { display: flex; flex-flow: row nowrap; justify-content: space-between; }
     div.hero-7-container div.container-body div.subcontainer { min-width: 279px; justify-content: unset; flex-direction: column;}
-    div.hero-7-container div.form-container { max-width: 337px; }
+    div.hero-7-container div.form-container { width: 100%; max-width: 337px; }
+    div.hero-7-container div.__container { display: flex; justify-content: space-between; }
     div.follow-us-container { margin-bottom: 91px; }
     div.hero-7-container div.container-body div.contact-us { margin-top: 0px;}
     img.doctor-coffee { display: block; margin: 0 24px 0 auto; }

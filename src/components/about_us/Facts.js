@@ -1,27 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import badgeIcon from '../../assets/svg/badge.svg';
 import moneyIcon from '../../assets/svg/Money.svg';
 import peopleIcon from '../../assets/svg/people.svg';
 import crownIcon from '../../assets/svg/crown.svg';
 import '../../css/about_us/Facts.css';
 
-const Facts = ({ size, ismobile }) => {
-
-    const [mobileDevice, setMobileDevice] = useState(true); 
-
-    useEffect(() =>{
-        const isMobileDevice = () =>{
-            if(ismobile === 'true') {
-                setMobileDevice(true)
-                return;
-            }
-            setMobileDevice(false);
-            return;
-        }
-
-        isMobileDevice();
-    }, [ismobile]);
- 
+const Facts = ({ size }) => { 
     return (
         <div className={`facts bg-blue ${size}`}>
             <div className="facts-container">

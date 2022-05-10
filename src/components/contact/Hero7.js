@@ -43,18 +43,23 @@ const Hero7 = ({ size, ismobile }) => {
                 {
                     mobileDevice ? (
                         <>
-                            <div className="container-body">
-                                <div className="subcontainer"></div>
-                                <ContainerHeader />
-                                <div className="contact-us reveal-load"> 
-                                    <p className='semibold-14'>Contactanos por:</p>
-                                    <ContactUsInfo /> 
+                            <ContainerHeader />
+                            <div className="__container">
+                                <div className="container-body">
+                                    <div className="subcontainer">
+                                        <div className="contact-us reveal-load"> 
+                                            <p className='semibold-14'>Contactanos por:</p>
+                                            <ContactUsInfo /> 
+                                        </div>
+                                        <div className='subcontainer'>
+                                            { size === 'md' && ( <FollowUs /> )}
+                                            <img className='doctor-coffee reveal-load' src={doctorCoffee} alt="doctor-coffe" />
+                                        </div>
+                                    </div>
                                 </div>
-                                { size === 'md' && ( <FollowUs /> )}
-                                <img className='doctor-coffee reveal-load' src={doctorCoffee} alt="doctor-coffe" />
+                                { ['xs', 'sm'].includes(size) && ( <FollowUs /> )}                     
+                                <div className="form-container reveal-load"> <ContactForm size={size} /> </div>
                             </div>
-                            { ['xs', 'sm'].includes(size) && ( <FollowUs /> )}                     
-                            <div className="form-container reveal-load"> <ContactForm size={size} /> </div>
                         </>
                     ) : (
                         <>
@@ -95,6 +100,7 @@ const ContainerHeader = () => {
 }
 
 const FollowUs = () => {
+
     return (
         <div className="follow-us-container reveal-load">
             <p className='semibold-14'>Síguenos en:</p>
@@ -111,6 +117,7 @@ const FollowUs = () => {
 }
 
 const ContactUsInfo = () => {
+
     return (
         <div className="info-call">
             <div className='info-call-container'>

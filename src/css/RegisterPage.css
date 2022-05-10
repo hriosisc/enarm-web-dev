@@ -16,7 +16,7 @@ div.register div.image-container img { position: relative ; bottom: -4px; width:
 
 /* // Medium devices (tablets, 768px and up) */
 @media screen and (min-width: 768px) and (max-width: 991.98px) {
-
+    div.register div.image-container { margin-top: 72px; }
 }
 
 /* // Large devices (desktops, 992px and up) */
@@ -39,7 +39,7 @@ div.register div.image-container img { position: relative ; bottom: -4px; width:
     div.register-container div.__container { display: flex; flex-direction: column; max-width: 469px; align-items: flex-start; margin-left: auto; position: relative; z-index: 1080; }
     div.register-container div.container-head > * { text-align: start; }
     div.register-container div.container-body { width: 100%; margin: unset; }
-    div.register div.image-container { position: absolute; top: 0; height: calc(100vh - 205px); z-index: 1040; }
+    div.register div.image-container { position: absolute; top: 104px; height: calc(100vh - 205px); z-index: 1040; }
     div.register div.image-container img { height: 702px;  }
     div.register div.triangle { width: 83vw; height: 40%; background: white; position: absolute; bottom: 0; right: 0; clip-path: polygon(0% 100%, 100% 100%, 100% 0%); z-index: 990; }
 }

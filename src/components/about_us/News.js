@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../../css/about_us/News.css';
 
@@ -40,24 +40,10 @@ const news_list = [
     },
 ]
 
-const News = ({ size, ismobile }) => {
-
-    const [mobileDevice, setMobileDevice] = useState(true);
-    const [selected, setSelected] = useState(news_list);
-
-    useEffect(() =>{
-        const isMobileDevice = () =>{
-            if(ismobile === 'true') {
-                setMobileDevice(true)
-                return;
-            }
-            setMobileDevice(false);
-            return;
-        }
-
-        isMobileDevice();
-    }, [ismobile]);
+const News = ({ size }) => {
  
+    const [selected, setSelected] = useState(news_list); 
+
     const collepsedParrafToggle = (ix) => {
         const parraf = selected[ix].parraf;
         if(selected[ix].isClicked) return parraf;
@@ -78,7 +64,11 @@ const News = ({ size, ismobile }) => {
                     <h2 className='subtitle text-center'>
                         Nuestro proposito es, que pases el ENARM en tú primer intento.
                     </h2>
-                    <p className='regular-14 text-center'>Este año te ofrecemos una preparación radicalmente superior, totalmente actualizada y mejorada con nuevas herramientas y contenido, ya que nuestra meta es llegar a más del 85% de nuestros alumnos aprobados en su primer intento.</p>
+                    <p className='regular-14 text-center'>
+                        Este año te ofrecemos una preparación radicalmente superior, 
+                        totalmente actualizada y mejorada con nuevas herramientas y contenido, 
+                        ya que nuestra meta es llegar a más del 85% de nuestros alumnos aprobados en su primer intento.
+                    </p>
                 </div>
                 <div className="container-body">
                     <div className="news-items">

@@ -17,7 +17,7 @@ const AboutCoursePage = () => {
     return (
         <>
             <Hero3 size={size} ismobile={isMobile().toString()} />
-            <Process size={size} ismobile={isMobile().toString()} />
+            <Process size={size} />
             <HowItWorks size={size} ismobile={isMobile().toString()} />
             <Contents size={size} ismobile={isMobile().toString()} />
         </>

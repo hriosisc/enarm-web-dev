@@ -1,24 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import methodImg from '../../assets/imgs/monis/Metodologia.png';
 import '../../css/about_course/Process.css'; 
 
-const Process = ({ size, ismobile }) =>{
-
-    const [mobileDevice, setMobileDevice] = useState(true);
-
-    useEffect(() =>{
-        const isMobileDevice = () =>{
-            if(ismobile === 'true') {
-                setMobileDevice(true)
-                return;
-            }
-            setMobileDevice(false);
-            return;
-        }
-
-        isMobileDevice();
-    }, [ismobile]);
- 
+const Process = ({ size }) => { 
     return (
         <div className={`process ${size}`}>
             <div className="process-container">

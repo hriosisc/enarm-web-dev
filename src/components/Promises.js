@@ -1,26 +1,11 @@
-import React, { useState, useEffect} from 'react'; 
+import React from 'react'; 
 import doctorsImage from '../assets/imgs/Dres/patient-satisfaction-survey_1.png';
 import '../css/Promises.css';
 
-const Promises = ({ size, ismobile }) => {
-
-    const [mobileDevice, setMobileDevice] = useState(true); 
-
-    useEffect(() =>{
-        const isMobileDevice = () =>{
-            if(ismobile === 'true') {
-                setMobileDevice(true)
-                return;
-            }
-            setMobileDevice(false);
-            return;
-        }
-
-        isMobileDevice();
-    }, [ismobile]);
+const Promises = ({ size }) => {
  
     return (
-        <div className='promises'>
+        <div className={`promises ${size}`}>
             <div className="promises-container reveal">
                 <div className="promises-container-body">
                     {

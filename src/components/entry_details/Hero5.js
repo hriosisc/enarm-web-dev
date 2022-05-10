@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'; 
+import React from 'react'; 
 import facebookIcon from '../../assets/icons/facebook-blue.png';
 import twitterIcon from '../../assets/icons/twitter-blue.png';
 import pinterestIcon from '../../assets/icons/pinterest-blue.png';
@@ -6,23 +6,7 @@ import instagramIcon from '../../assets/icons/instagram-blue.png';
 import '../../css/entry_details/Hero5.css';
 
 
-const Hero5 = ({ size, ismobile }) => {
-
-    const [mobileDevice, setMobileDevice] = useState(true);  
-
-    useEffect(() =>{
-        const isMobileDevice = () =>{
-            if(ismobile === 'true') {
-                setMobileDevice(true)
-                return;
-            }
-            setMobileDevice(false);
-            return;
-        }
-
-        isMobileDevice();
-    }, [ismobile]);
-    
+const Hero5 = ({ size }) => { 
     setTimeout(() => {
         
         const body = document.querySelector("body");

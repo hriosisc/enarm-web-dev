@@ -1,25 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import starBlueIcon from '../../assets/icons/star-blue.png'
 import Carrousel from '../Carrousel';
 import '../../css/free_test/Advantages.css';
 
-const Advantages = ({ size, ismobile }) => {
-
-    const [mobileDevice, setMobileDevice] = useState(true);  
-
-    useEffect(() =>{
-        const isMobileDevice = () =>{
-            if(ismobile === 'true') {
-                setMobileDevice(true)
-                return;
-            }
-            setMobileDevice(false);
-            return;
-        }
-
-        isMobileDevice();
-    }, [ismobile]);
-
+const Advantages = ({ size }) => { 
+ 
     return (
         <div className='advantages'>
             <div className="advantages-container">

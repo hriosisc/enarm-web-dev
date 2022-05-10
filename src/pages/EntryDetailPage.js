@@ -17,7 +17,7 @@ const EntryDetailPage = () => {
 
     return (
         <div>
-            <Hero5 size={size} ismobile={isMobile().toString()} />
+            <Hero5 size={size} />
             <Entry size={size} ismobile={isMobile().toString()} />
             <InterestingEntries size={size} ismobile={isMobile().toString()} />
             <Resources size={size} ismobile={isMobile().toString()} />

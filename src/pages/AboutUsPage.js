@@ -20,10 +20,10 @@ const AboutUsPage = () => {
         <>
             <Hero2 size={size} ismobile={isMobile().toString()} />
             <KnowUs size={size} ismobile={isMobile().toString()} />
-            <News size={size} ismobile={isMobile().toString()} />
-            <Facts size={size} ismobile={isMobile().toString()} />
-            <Stats size={size} ismobile={isMobile().toString()} />
-            <Promises size={size} ismobile={isMobile().toString()} /> 
+            <News size={size} />
+            <Facts size={size} />
+            <Stats size={size} />
+            <Promises size={size} /> 
         </>
     )
 }
