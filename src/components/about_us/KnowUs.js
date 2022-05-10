@@ -24,46 +24,61 @@ const KnowUs = ({ size, ismobile }) =>{
     return (
         <div className={`know-us ${size} bg-blue`}>
             <div className="know-us-container">
-                <div className="container-head">
-                    <h1 className={`tiny-blue-title ${ mobileDevice ? 'text-center' : ''}`}>CONÓCENOS</h1>
-                    <h2 className={`${ mobileDevice ? 'subtitle white text-center' : 'bold-39 white'} know-us-subtitle`}>
-                        Nuestra cartera de alumnos rebasa el 80% de Aceptación a su Residencia
-                    </h2>
-                    <p className={`${ mobileDevice ? 'regular-14 white text-center' : 'regular-16 white'}`}>
-                        Contamos con una múltiple experiencia de formación para reforzar cada estilo de aprendizaje:
-                    </p>
-                </div>
-                <div className="container-body">                    
-                    { ['xs', 'sm'].includes(size) ? (
+                {
+                    mobileDevice ? ( 
                         <>
-                            <KnowList />
-                            <div className="image-container">
-                                <img src={docImage} alt="know-us-img" />
+                            <div className="container-head">
+                                <h1 className={`tiny-blue-title ${ mobileDevice ? 'text-center' : ''}`}>CONÓCENOS</h1>
+                                <h2 className={`${ mobileDevice ? 'subtitle white text-center' : 'bold-39 white'} know-us-subtitle`}>
+                                    Nuestra cartera de alumnos rebasa el 80% de Aceptación a su Residencia
+                                </h2>
+                                <p className={`${ mobileDevice ? 'regular-14 white text-center' : 'regular-16 white'}`}>
+                                    Contamos con una múltiple experiencia de formación para reforzar cada estilo de aprendizaje:
+                                </p>
                             </div>
+                            {
+                                ['xs','sm'].includes(size) ? (
+                                    <div className="container-body">  
+                                        <KnowList />
+                                        <div className="image-container">
+                                            <img src={docImage} alt="know-us-img" />
+                                        </div> 
+                                    </div>                                        
+                                ) : ( 
+                                    <div className="container-body">  
+                                        <div className='subcontainer'>
+                                            <KnowList />
+                                        </div>
+                                        <div className="image-container">
+                                            <img src={docImage} alt="know-us-img" />
+                                        </div> 
+                                    </div>
+                                )
+                            }            
                         </>
                     ) : (
                         <>
-                            <div className="subcontainer">
-                                <KnowList />
+                            <div className="__container">
+                                <div className="container-head">
+                                    <h1 className={`tiny-blue-title ${ mobileDevice ? 'text-center' : ''}`}>CONÓCENOS</h1>
+                                    <h2 className={`${ mobileDevice ? 'subtitle white text-center' : 'bold-39 white'} know-us-subtitle`}>
+                                        Nuestra cartera de alumnos rebasa el 80% de Aceptación a su Residencia
+                                    </h2> 
+                                    <p className={`${ mobileDevice ? 'regular-14 white text-center' : 'regular-16 white'}`}>
+                                        Contamos con una múltiple experiencia de formación para reforzar cada estilo de aprendizaje:
+                                    </p>
+                                </div>
+                                <div className="container-body">     
+                                    <KnowList /> 
+                                </div>
                             </div> 
-                            {
-                                size === "md" && (
-                                    <div className="image-container">
-                                        <img src={docImage} alt="know-us-img" />
-                                    </div> 
-                                )
-                            }
+                            <div className="image-container">
+                                <img src={docImage} alt="know-us-img" />
+                            </div> 
                         </>
-                    )}
-                </div>
-            </div>
-            {
-                !mobileDevice && (
-                    <div className="image-container">
-                        <img src={docImage} alt="know-us-img" />
-                    </div> 
-                )
-            }
+                    )
+                }
+            </div> 
         </div>
     )
 }

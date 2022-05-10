@@ -10,20 +10,21 @@ div.register-container div.container-bottom { margin-bottom: 144px; }
 div.register div.image-container img { position: relative ; bottom: -4px; width: 100%; }
 
 /* // Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {   
+@media screen and (min-width: 576px) and (max-width: 767.98px) {   
     div.register div.container { max-width: 576px; margin: 0px auto; }
 } 
 
 /* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
 
 }
 
 /* // Large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {   
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {   
     div.register { width: 100%; position: relative; overflow-y: hidden; overflow-x: hidden; height: 100vh; background: linear-gradient(180deg, #FFFFFF 42.12%, #E2ECF8 72.95%); }
     div.register-container { max-width: 1440px; margin: 0 auto; padding: 72px; }
     div.register-container div.__container { display: flex; flex-direction: column; max-width: 409px; align-items: flex-start; margin-left: auto; position: relative; z-index: 1080;}
+    div.register-container div.container-head > * { text-align: start; }
     div.register-container div.container-body { width: 100%; margin: unset; }
     div.register div.image-container { position: absolute; bottom: 0; height: calc(100vh - 205px); z-index: 1040; }
     div.register div.image-container img { max-height: 702px; height: 100%; } 
@@ -31,32 +32,27 @@ div.register div.image-container img { position: relative ; bottom: -4px; width:
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) and (max-width: 1399.98px){ 
+@media screen and (min-width: 1200px) and (max-width: 1399.98px){ 
 
-    div.register { width: 100%; position: relative; overflow-y: hidden; overflow-x: hidden; height: 100vh; background: linear-gradient(180deg, #FFFFFF 42.12%, #E2ECF8 72.95%); }
-    div.register-container { max-width: 1440px; margin: 0 auto; padding: 100px 120px; }
+    div.register { width: 100%; position: relative; overflow-y: hidden; overflow-x: hidden; background: linear-gradient(180deg, #FFFFFF 42.12%, #E2ECF8 72.95%); }
+    div.register-container { max-width: 1440px; margin: 0 auto; padding: 100px 120px; height: 100vh; }
     div.register-container div.__container { display: flex; flex-direction: column; max-width: 469px; align-items: flex-start; margin-left: auto; position: relative; z-index: 1080; }
+    div.register-container div.container-head > * { text-align: start; }
     div.register-container div.container-body { width: 100%; margin: unset; }
-    div.register div.image-container { position: absolute; top: 104px;  height: calc(100vh - 205px); z-index: 1040; }
+    div.register div.image-container { position: absolute; top: 0; height: calc(100vh - 205px); z-index: 1040; }
     div.register div.image-container img { height: 702px;  }
     div.register div.triangle { width: 83vw; height: 40%; background: white; position: absolute; bottom: 0; right: 0; clip-path: polygon(0% 100%, 100% 100%, 100% 0%); z-index: 990; }
 }
 
 /* // XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px) { 
+@media screen and (min-width: 1400px) { 
 
-    div.register { 
-        width: 100%;
-        position: relative;
-        overflow-y: hidden;
-        overflow-x: hidden;
-        max-height: calc(100vh - 104px);
-        background: linear-gradient(180deg, #FFFFFF 42.12%, #E2ECF8 72.95%);
-        min-height: 802px;}
-    div.register-container { max-width: 1440px; margin: 0 auto; padding: 100px 120px; }
+    div.register { width: 100%; position: relative; overflow-y: hidden; overflow-x: hidden; max-height: calc(100vh - 104px); background: linear-gradient(180deg, #FFFFFF 42.12%, #E2ECF8 72.95%); min-height: 802px; }
+    div.register-container { max-width: 1440px; margin: 0 auto; padding: 100px 120px; height: 100vh; }
     div.register-container div.__container { display: flex; flex-direction: column; max-width: 488px; align-items: flex-start; margin-left: auto; position: relative; z-index: 1080;}
+    div.register-container div.container-head > * { text-align: start; }
     div.register-container div.container-body { width: 100%; margin: unset; }
     div.register div.image-container { position: absolute; top: 104px; height: calc(100vh - 205px); z-index: 1040; }
-    div.register div.image-container img { min-height: 720px;} 
+    div.register div.image-container img { height: 80vh; bottom: -8px; }
     div.register div.triangle { width: 83vw; height: 40%; background: white; position: absolute; bottom: 0; right: 0; clip-path: polygon(0% 100%, 100% 100%, 100% 0%); z-index: 990; }
 }

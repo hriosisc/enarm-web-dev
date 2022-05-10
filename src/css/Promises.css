@@ -45,7 +45,7 @@ div.promises-subcontainer button:hover i { left: 10px; transition: left 350ms; }
 
 /* // XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) { 
-    div.promises-container { padding: 0px 120px 0px 0px; max-width: 1440px; }
+    div.promises-container { padding: 0px 120px 0px 0px; max-width: 1440px; margin: 0 auto; }
     div.promises-subcontainer button { max-width: 266px; }
     div.promises-subcontainer > * { text-align: start; }
     div.promises-container-body { align-items: center; justify-content: space-between;}

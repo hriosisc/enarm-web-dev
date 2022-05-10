@@ -1,7 +1,7 @@
 /* // X-Small devices (portrait phones, less than 576px) */ 
 div.contents-entries { width: 100%; }
 div.contents-entries-container { width: 100%; padding: 72px 24px; }
-div.pagination-entries { width: 155px; height: 21px; display: block; margin: 72px auto 0 auto; }
+div.pagination-entries { width: 155px; height: 21px; display: flex; margin: 72px auto 0 auto; justify-content: center;}
 div.contents-entries-container-header { margin-bottom: 38px; }
 div.contents-entries-container-header h2.subtitle { letter-spacing: 0px; } 
 div.contents-entries-container-body div.entries { display: flex; flex-direction: column; gap: 16px; align-items: center;} 
@@ -23,13 +23,14 @@ div.contents-entries-container-body div.entries div.entry:hover div.entry-image 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
  
-    div.contents-entries-container-body div.entries { flex-flow: flex wrap; justify-content: space-evenly;} 
+    div.contents-entries-container-body div.entries {display: flex; flex-direction: row; gap: 16px; align-items: center; flex-wrap: wrap; justify-content: space-evenly;} 
     div.contents-entries-container-body div.entry { min-width: 336px; width: 336px; } 
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) { 
     div.contents-entries-container-body div.entries { flex-direction: row; flex-wrap: wrap; justify-content: space-evenly;} 
+    div.contents-entries-container-body div.entries div.entry { max-width: 314px; }
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */
