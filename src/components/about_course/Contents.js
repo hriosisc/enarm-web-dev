@@ -20,7 +20,7 @@ const Contents = ({ size, ismobile }) =>{
     }, [ismobile]);
 
     return (
-        <div className='contents'>
+        <div className={`contents ${size}`}>
             <div className="contents-container">
                 <div className="contents-container-header">
                     <h1 className="tiny-blue-title text-center">CONTENIDO</h1>
