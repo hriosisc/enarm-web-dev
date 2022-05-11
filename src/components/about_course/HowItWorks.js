@@ -42,7 +42,7 @@ const cards_list = [
     },
     {
         title: 'Tips ENARM',
-        parraf: 'Estos Tips te mostrarán de forma divertida los puntos más preguntados en el ENARM..'
+        parraf: 'Estos Tips te mostrarán de forma divertida los puntos más preguntados en el ENARM.'
     },
     {
         title: 'E-book intensivo',

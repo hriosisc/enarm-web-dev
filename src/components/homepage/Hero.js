@@ -44,8 +44,15 @@ const Hero = ({size, ismobile}) => {
             { ["xl","xxl"].includes(size) && ( <div className='bg-rectangle'></div> ) }
             <div className='hero-container'>
                 <div className='description-container reveal-load'>
-                    <h1 className={`hero-title ${ mobileDevice ? 'title text-center' : 'regular-47'}`}>
-                        ¿Te gustaría aprobar el ENARM a la Primera?
+                    <h1 className={`hero-title ${ mobileDevice ? 'title text-center' : 'regular-47'} fade-in-title`}>
+                        <span className={mobileDevice ? "bold-44" : "regular-47"}>¿Te</span> 
+                        <span className={mobileDevice ? "bold-44" : "regular-47"}>gustaría</span> 
+                        <span className={mobileDevice ? "bold-44" : "regular-47"}>aprobar</span> 
+                        <span className={mobileDevice ? "bold-44" : "regular-47"}>el</span> 
+                        <span className={mobileDevice ? "bold-44" : "regular-47"}>ENARM</span> 
+                        <span className={mobileDevice ? "bold-44" : "regular-47"}>a</span> 
+                        <span className={mobileDevice ? "bold-44" : "regular-47"}>la</span> 
+                        <span className={mobileDevice ? "bold-44" : "regular-47"}>Primera?</span> 
                     </h1>
                     { mobileDevice ? (
                         <>

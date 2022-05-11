@@ -43,8 +43,13 @@ const Hero3 = ({ size, ismobile }) =>{
                 <div className="gradient"></div>
                 { !mobileDevice && ( <div className="triangle"></div> ) }
                 <div className="hero-3-container-header reveal-load">
-                    <h1 className={mobileDevice ? 'bold-39 text-center' : 'regular-47'}>
-                        Obtén un seguimiento personalizado e intensivo
+                    <h1 className={`${mobileDevice ? 'text-center' : ''} fade-in-title`}>
+                        <span className={mobileDevice ? 'bold-39': 'regular-47'}>Obtén</span>
+                        <span className={mobileDevice ? 'bold-39': 'regular-47'}>un</span>
+                        <span className={mobileDevice ? 'bold-39': 'regular-47'}>seguimiento</span>
+                        <span className={mobileDevice ? 'bold-39': 'regular-47'}>personalizado</span>
+                        <span className={mobileDevice ? 'bold-39': 'regular-47'}>e</span>
+                        <span className={mobileDevice ? 'bold-39': 'regular-47'}>intensivo</span>
                     </h1>
                     <p className={mobileDevice ? 'regular-14 text-center' : 'bold-16'}>
                         Este año queremos que más del 85% de nuestros alumnos aprueben el ENARM en su primer intento.

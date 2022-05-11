@@ -56,11 +56,17 @@ const Hero4 = ({ size, ismobile }) => {
     }
 
     return (
-        <div className='hero-4' >
+        <div className={`hero-4 ${size}`}>
             <div className="hero-4-container">
                 <div className="hero-4-container-header reveal-load">
-                    <h2 className="title text-center mb-16 reveal-load">
-                        Orientación sobre el ENARM y sus tendencias
+                    <h2 className="title text-center reveal-load fade-in-title">
+                        <span className={ismobile ? "bold-44": "bold-47"}>Orientación</span>
+                        <span className={ismobile ? "bold-44": "bold-47"}>sobre</span>
+                        <span className={ismobile ? "bold-44": "bold-47"}>el</span>
+                        <span className={ismobile ? "bold-44": "bold-47"}>ENARM</span>
+                        <span className={ismobile ? "bold-44": "bold-47"}>y</span>
+                        <span className={ismobile ? "bold-44": "bold-47"}>sus</span>
+                        <span className={ismobile ? "bold-44": "bold-47"}>tendencias</span>
                     </h2>
                     <p className={`${mobileDevice ? 'regular-14' : 'regular-16' } text-center reveal-load`}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, 

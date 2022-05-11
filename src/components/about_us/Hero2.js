@@ -35,8 +35,19 @@ const Hero2 = ({ size, ismobile }) => {
             <div className="hero-2-container">
                 <div className="container-header">
                     <div className="subcontainer">
-                        <h1 className={`${mobileDevice || size === 'lg' ? 'title text-center' : 'bold-47'} reveal-load`}>
-                            Conoce el curso Online #1, el más completo y exitoso de todos.
+                        <h1 className={`${mobileDevice || size === 'lg' ? 'text-center' : ''} reveal-load fade-in-title`}>
+                            <span className={(mobileDevice || size === 'lg') ? "bold-44" : "bold-47"}>Conoce</span>
+                            <span className={(mobileDevice || size === 'lg') ? "bold-44" : "bold-47"}>el</span>
+                            <span className={(mobileDevice || size === 'lg') ? "bold-44" : "bold-47"}>curso</span>
+                            <span className={(mobileDevice || size === 'lg') ? "bold-44" : "bold-47"}>Online</span>
+                            <span className={(mobileDevice || size === 'lg') ? "bold-44" : "bold-47"}>#1,</span>
+                            <span className={(mobileDevice || size === 'lg') ? "bold-44" : "bold-47"}>el</span>
+                            <span className={(mobileDevice || size === 'lg') ? "bold-44" : "bold-47"}>más</span>
+                            <span className={(mobileDevice || size === 'lg') ? "bold-44" : "bold-47"}>completo</span> 
+                            <span className={(mobileDevice || size === 'lg') ? "bold-44" : "bold-47"}>y</span>
+                            <span className={(mobileDevice || size === 'lg') ? "bold-44" : "bold-47"}>exitoso</span>
+                            <span className={(mobileDevice || size === 'lg') ? "bold-44" : "bold-47"}>de</span>
+                            <span className={(mobileDevice || size === 'lg') ? "bold-44" : "bold-47"}>todos.</span>
                         </h1>
                         <p className={`${mobileDevice || size === 'lg' ? 'regular-14 text-center' : 'regular-16'} reveal-load`}>
                             Integrado por un Equipo de más de 20 Médicos Especialistas, de casi todas las áreas de la medicina, que te llevarán de la mano para aprobar tu ENARM a la primera.

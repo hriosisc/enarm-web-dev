@@ -27,7 +27,9 @@ const RegisterPage = () => {
                     <>
                         <div className='__container'>
                             <div className="container-head">
-                                <h1 className="title text-center">Registro</h1>
+                                <h1 className="title text-center fade-in-title">
+                                    <span className={ isMobile() ? "bold-44" : "bold-47"}>Registro</span>
+                                    </h1>
                             </div>
                             <div className="container-body">  
                                 <RegisterForm size={size}/>                    

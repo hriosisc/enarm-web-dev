@@ -27,7 +27,11 @@ const LoginPage = () => {
                 <>
                     <div className='__container'>
                         <div className="container-head">
-                            <h1 className="title text-center">¡Bienvenido de nuevo!</h1>
+                            <h1 className="title text-center fade-in-title">
+                                <span className={isMobile() ? "bold-44" : "bold-47"}>¡Bienvenido</span>
+                                <span className={isMobile() ? "bold-44" : "bold-47"}>de</span>
+                                <span className={isMobile() ? "bold-44" : "bold-47"}>nuevo!</span>
+                            </h1>
                         </div>
                         <div className="container-body">  
                             <FormLogin size={size} mobile={isMobile()}/>

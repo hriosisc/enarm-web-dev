@@ -32,22 +32,22 @@ const Resources = ({size, ismobile}) => {
                 <div className='resources-body'>
                     <div className='resources-item'>
                         <i className="material-icons-outlined item-icon bg-green">play_arrow</i>
-                        <p className={ !["lg", "xl", "xxl"].includes(size)  ? 'regular-20 text-center' : 'regular-23'}>Vive la experiencia ENARM gratis</p>
+                        <p className={ mobileDevice ? 'regular-20 text-center' : 'regular-23'}>Vive la experiencia ENARM gratis</p>
                         <Link className='blue-link link-with-icon' to="#">Prueba Gratis <i className='material-icons-outlined'>chevron_right</i></Link>
                     </div>
                     <div className='resources-item'>
                         <i className="material-icons-outlined item-icon bg-blue">search</i>
-                        <p className={ !["lg", "xl", "xxl"].includes(size) ? 'regular-20 text-center' : 'regular-23'}>Guía descriptiva del curso 2021</p>
+                        <p className={ mobileDevice? 'regular-20 text-center' : 'regular-23'}>Guía descriptiva del curso 2021</p>
                         <Link className='blue-link link-with-icon' to="#">Descargar <i className='material-icons-outlined'>chevron_right</i></Link>
                     </div>
                     <div className='resources-item'>
                         <i className="material-icons-outlined item-icon bg-gray">tips_and_updates</i>
-                        <p className={ !["lg", "xl", "xxl"].includes(size) ? 'regular-20 text-center' : 'regular-23'}> Abarcamos todas las exigencias del ENARM</p>
+                        <p className={ mobileDevice? 'regular-20 text-center' : 'regular-23'}> Abarcamos todas las exigencias del ENARM</p>
                         <Link className='blue-link link-with-icon' to="#">Iniciar hoy mismo <i className='material-icons-outlined'>chevron_right</i></Link>
                     </div>
                     <div className='resources-item'>
                         <i className="material-icons-outlined item-icon bg-orange">school</i>
-                        <p className={ !["lg", "xl", "xxl"].includes(size) ? 'regular-20 text-center' : 'regular-23'}>Conoce nuestra metodología de estudio</p>
+                        <p className={ mobileDevice? 'regular-20 text-center' : 'regular-23'}>Conoce nuestra metodología de estudio</p>
                         <Link className='blue-link link-with-icon' to="#">Ver método de estudio <i className='material-icons-outlined'>chevron_right</i></Link>
                     </div>
                 </div>

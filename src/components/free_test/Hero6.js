@@ -26,8 +26,14 @@ const Hero6 = ({ size }) => {
             <div className="gradient"></div>
             <div className="hero-6-container">
                 <div className="hero-6-container-header">
-                    <h1 className='title text-center reveal-load'>
-                        Tu curso de Plataforma ENARM comienza aquí
+                    <h1 className='title text-center reveal-load fade-in-title'>
+                        <span className={['lg', 'xl', 'xxl'].includes(size) ? 'bold-47' : 'bold-44'}>Tu</span>
+                        <span className={['lg', 'xl', 'xxl'].includes(size) ? 'bold-47' : 'bold-44'}>curso</span>
+                        <span className={['lg', 'xl', 'xxl'].includes(size) ? 'bold-47' : 'bold-44'}>de</span>
+                        <span className={['lg', 'xl', 'xxl'].includes(size) ? 'bold-47' : 'bold-44'}>Plataforma</span>
+                        <span className={['lg', 'xl', 'xxl'].includes(size) ? 'bold-47' : 'bold-44'}>ENARM</span>
+                        <span className={['lg', 'xl', 'xxl'].includes(size) ? 'bold-47' : 'bold-44'}>comienza</span>
+                        <span className={['lg', 'xl', 'xxl'].includes(size) ? 'bold-47' : 'bold-44'}>aquí</span>
                     </h1>
                     <p className='regular-14 text-center reveal-load'>
                         Tenemos a tu disposición una serie de recursos gratuitos 

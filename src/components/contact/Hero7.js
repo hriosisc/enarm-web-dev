@@ -43,7 +43,7 @@ const Hero7 = ({ size, ismobile }) => {
                 {
                     mobileDevice ? (
                         <>
-                            <ContainerHeader />
+                            <ContainerHeader mobile={ismobile} />
                             <div className="__container">
                                 <div className="container-body">
                                     <div className="subcontainer">
@@ -64,7 +64,7 @@ const Hero7 = ({ size, ismobile }) => {
                     ) : (
                         <>
                             <div className='__container'>
-                                <ContainerHeader />
+                                <ContainerHeader mobile={ismobile} />
                                 <div className="container-body">
                                     <div className="subcontainer"> 
                                         <div className="contact-us reveal-load"> 
@@ -87,10 +87,14 @@ const Hero7 = ({ size, ismobile }) => {
     ) 
 }
 
-const ContainerHeader = () => {
+const ContainerHeader = ({ mobile }) => {
     return (
         <div className="container-header">
-            <h1 className="title text-center reveal-load">Habla con nosotros</h1>
+            <h1 className="title text-center reveal-load fade-in-title">
+                <span className={ mobile ? "bold-44" : "bold-47" }>Habla</span>
+                <span className={ mobile ? "bold-44" : "bold-47" }>con</span>
+                <span className={ mobile ? "bold-44" : "bold-47" }>nosotros</span>   
+            </h1>
             <p className="regular-14 text-center reveal-load">
                 Ya sea que estés buscando más información, o quieras enviar tu formato de pago. 
                 Estamos aquí para ayudarte ante cualquier inquietud.
