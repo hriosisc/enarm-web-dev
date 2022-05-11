@@ -75,6 +75,10 @@ const ContentsEntries = ({ size, ismobile }) => {
         navigate(`/blog/${i}`, { replace: false });
     }
 
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0 })
+    }
+    
     return (
         <div className={`contents-entries ${size}`}>
             <div className="contents-entries-container">
@@ -91,7 +95,7 @@ const ContentsEntries = ({ size, ismobile }) => {
                                             <img src={item.image} alt="entry" />
                                         </div>
                                         <div className="entry-text">
-                                            <Link className='entry-link' to={`/blog/${index}`} key={index}>
+                                            <Link onClick={() => scrollToTop() }className='entry-link' to={`/blog/${index}`} key={index}>
                                                 <p className={`${mobileDevice ? "regular-14" : "regular-16"} gray`}>{item.date}</p>
                                                 <p className="regular-20">{item.text}</p>
                                             </Link>

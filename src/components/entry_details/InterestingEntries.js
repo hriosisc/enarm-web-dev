@@ -53,6 +53,10 @@ const InterestingEntries = ({ size, ismobile }) => {
     //     body.scrollTop = 0; 
     // }
 
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0 })
+    }
+
     function topFunction() {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
@@ -76,7 +80,7 @@ const InterestingEntries = ({ size, ismobile }) => {
                                             <img src={item.image} alt="entry" />
                                         </div>
                                         <div className="entry-text">
-                                            <Link className='entry-link' to={`/blog/${index}`} key={index}>
+                                            <Link onClick={() => scrollToTop() }className='entry-link' to={`/blog/${index}`} key={index}>
                                                 <p className={`${mobileDevice ? "regular-14" : "regular-16"} gray`}>{item.date}</p>
                                                 <p className="regular-20">{item.text}</p>
                                             </Link>
