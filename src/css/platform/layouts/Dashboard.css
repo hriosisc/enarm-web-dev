@@ -1,0 +1,26 @@
+.platform-wrapper {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+header.platform-el {
+    position: relative;
+}
+
+main.main-platform {
+    position: relative;
+    top: 48px;
+    left: 208px;
+    display: block;
+    width: calc(100vw - 208px);
+    background: #F0F2F5;
+    height: calc(100vh - 48px);
+    transition: all 200ms ease;
+}
+
+main.main-platform.minimized {
+    width: calc(100vw - 47px);
+    left: 47px;
+    transition: all 200ms ease;
+}

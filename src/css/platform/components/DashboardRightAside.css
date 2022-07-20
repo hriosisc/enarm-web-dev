@@ -1,0 +1,90 @@
+.aside-right-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.aside-right-container>div {
+    width: 278px;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    border-radius: 2px;
+
+}
+
+.calendar-head,
+.progress-head {
+    width: 278px;
+    height: 56px;
+    background: #FFFFFF;
+    box-shadow: inset -1px 0px 0px #F0F0F0, inset 0px 1px 0px #F0F0F0, inset 1px 0px 0px #F0F0F0;
+    padding: 0px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.calendar-body,
+.progress-body {
+    width: 278px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 1px 0px #F0F0F0;
+    padding: 24px;
+}
+
+.calendar-body {
+    min-height: 298px;
+}
+
+
+.calendar-body button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 8px;
+    width: 230px;
+    height: 24px;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.016);
+    border-radius: 2px;
+    margin-top: 8px;
+}
+
+/* PROGRESS BAR */
+
+
+.progress-body>div {
+    width: 230px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+}
+
+.progress-body div span {
+    width: 30px; 
+    display: block;
+    text-align: end;
+}
+
+.progress-bar {
+    width: 200px;
+    height: 8px;
+    background: #F5F5F5;
+    border-radius: 5px;
+    position: relative;
+}
+
+.progress-bar::before {
+    content: '';
+    width: 10px;
+    height: 8px;
+    background: var(--sky-blue);
+    position: absolute;
+    border-radius: 4px;
+}
+
+.progress-body div span::after {
+    content: '%';
+}

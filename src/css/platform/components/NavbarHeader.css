@@ -1,0 +1,50 @@
+/* div {
+    outline: 1px solid gray;
+} */
+ 
+header.platform-el nav.header-nav div.navbar-tools {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 48px;
+    max-height: 48px;
+    background: rgba(30, 115, 190, 1);
+    justify-content: flex-end;
+    align-items: center;
+}
+
+div.about-tag, 
+div.search-tag { 
+    display: block;
+    max-height: 24px;
+    padding-right: 12px;
+    padding-left: 12px; 
+}
+
+div.about-tag button,
+div.search-tag button {
+    background: transparent;
+    height: 24px;
+    border: none;
+}
+
+div.about-tag button i, 
+div.search-tag button i {
+    display: block;
+    width: 24px;
+    height: 24px;
+    color: white;
+}
+
+div.user-info {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 12px;
+    gap: 8px;
+}
+div.user-info span.user-name {
+    color: white;
+    font-family: var(--roboto);
+}

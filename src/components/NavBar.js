@@ -35,7 +35,7 @@ const NavBar = ({ size, ismobile }) => {
     }
  
     return (
-        <header className={size}>
+        <header className={`${size} enarm-land`}>
             <nav className='navbar'>
                 <div className={`navbar-container ${size}`}>
                     <div className="navbar-logo-container">

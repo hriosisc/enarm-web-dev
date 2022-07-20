@@ -1,0 +1,33 @@
+.study-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+}
+
+.wrapper-header div {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 12px;
+    align-items: center;
+}
+
+.wrapper-body>div:first-child {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.guide-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.guide-download button {
+    width: 230px;
+    height: 24px;
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.016);
+    border-radius: 2px;
+}
