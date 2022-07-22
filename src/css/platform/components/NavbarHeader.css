@@ -1,7 +1,7 @@
 /* div {
     outline: 1px solid gray;
 } */
- 
+
 header.platform-el nav.header-nav div.navbar-tools {
     display: flex;
     position: absolute;
@@ -13,12 +13,12 @@ header.platform-el nav.header-nav div.navbar-tools {
     align-items: center;
 }
 
-div.about-tag, 
-div.search-tag { 
+div.about-tag,
+div.search-tag {
     display: block;
     max-height: 24px;
     padding-right: 12px;
-    padding-left: 12px; 
+    padding-left: 12px;
 }
 
 div.about-tag button,
@@ -28,7 +28,7 @@ div.search-tag button {
     border: none;
 }
 
-div.about-tag button i, 
+div.about-tag button i,
 div.search-tag button i {
     display: block;
     width: 24px;
@@ -44,7 +44,49 @@ div.user-info {
     padding: 0 12px;
     gap: 8px;
 }
+
+.user-info:hover {
+    cursor: pointer;
+}
+
 div.user-info span.user-name {
     color: white;
     font-family: var(--roboto);
+}
+
+.u-modal-user {
+    position: absolute;
+    right: 0;
+    top: 48px;
+    z-index: 1080;
+}
+
+.u-modal-container {
+    display: flex;
+    flex-direction: column;
+    background: #FAFAFA;
+    width: 184px;
+    padding: 0px 24px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.u-modal-container div {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 44px;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.u-modal-container div i {
+    color: #707070;
+}
+
+.u-modal-container div:hover {
+    cursor: pointer;
+}
+
+.u-modal-container div:hover i {
+    color: #000;
 }
