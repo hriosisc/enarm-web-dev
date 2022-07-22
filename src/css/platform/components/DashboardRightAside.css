@@ -63,7 +63,7 @@
 }
 
 .progress-body div span {
-    width: 30px; 
+    width: 30px;
     display: block;
     text-align: end;
 }
@@ -87,4 +87,92 @@
 
 .progress-body div span::after {
     content: '%';
+}
+
+
+.c-progressrecord-container .pr-head {
+    height: 52px;
+    display: flex;
+    padding: 0px 24px;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    border-radius: 2px;
+}
+
+.c-progressrecord-container .pr-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: #fff;
+}
+
+.c-progressrecord-container .pr-body>div {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 8px;
+}
+
+.c-studymethod-head {
+    height: 52px;
+    padding: 0px 24px;
+    display: flex;
+    align-items: center;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    border-radius: 2px;
+}
+
+.c-studymethod-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.methods div:nth-child(1) span:first-child::before { content: "1";}
+.methods div:nth-child(2) span:first-child::before { content: "2";}
+.methods div:nth-child(3) span:first-child::before { content: "3";}
+.methods div:nth-child(4) span:first-child::before { content: "4";}
+
+.methods div:not(:last-child) span:last-child::before { 
+    content: "";
+    display: block;
+    position: absolute;
+    height: 22px;
+    border: 1px solid #1890ff;
+    left: -25px;
+    top: 2px;
+  }
+
+.methods div span:first-child::before { 
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: #05B2FA;
+    border: 1px solid #1890FF;
+    border-radius: 32px;
+    color: white;
+    text-align: center;
+    line-height: 32px;
+    font-size: 16px;
+    position: absolute;
+    top: -6px;
+    left: -40px;
+}
+
+.methods { 
+    display: flex;
+    flex-direction: column; 
+    padding-top: 6px;
+    padding-left: 40px;
+    gap: 12px;
+}
+
+.methods div {
+    
+    display: flex;
+    flex-direction: column; 
+    gap: 4px;
 }

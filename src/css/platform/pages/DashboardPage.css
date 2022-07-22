@@ -1,15 +1,17 @@
-
 div.main-container {
     padding: 12px 24px 0px 24px;
     height: calc(100vh - 48px);
     overflow-y: auto;
 }
 
-div.c-cards-container { 
+div.c-cards-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 40px;
+    max-width: 1184px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 div.bigCards-container {
@@ -17,4 +19,7 @@ div.bigCards-container {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 24px;
+    max-width: 1184px;
+    margin-left: auto;
+    margin-right: auto;
 }

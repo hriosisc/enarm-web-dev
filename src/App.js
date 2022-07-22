@@ -21,10 +21,10 @@ import StudyPlansPage from './pages/platform/StudyPlansPage';
 import DocumentsPage from './pages/platform/DocumentsPage';
 import DashboardAsideWidth from './contexts/platform/DashboardAsideContext';
 import AdvicesNewsPage from './pages/platform/AdvicesNewsPage';
-import PlanMonthPage from './pages/platform/PlanMonthPage';
-import CurrentGuideContext from './contexts/platform/CurrentGuideContext';
+import PlanMonthPage from './pages/platform/PlanMonthPage'; 
 import StudyGuidePage from './pages/platform/StudyGuidePage';
 import AcademicProgramPage from './pages/platform/AcademicProgramPage';
+import StudyCourseContentPage from './pages/platform/StudyCourseContentPage';
 
 const App = () => {
 
@@ -111,22 +111,19 @@ const App = () => {
                         { /* Platform */}
                         <Route path='/u/dashboard' element={<DashboardLayout hasAside={false}><DashboardPage /></DashboardLayout>} />
                         <Route path='/u/planes' element={<DashboardLayout hasAside={true}><StudyPlansPage /></DashboardLayout>} />
-                        <Route path='/u/planes/:id' element={<DashboardLayout hasAside={true}><PlanMonthPage mes={11} /></DashboardLayout>} />
+                        <Route path='/u/planes/:id' element={<DashboardLayout hasAside={true}><PlanMonthPage /></DashboardLayout>} />
+                        <Route path='/u/planes/:id/contenido/:id' element={<DashboardLayout hasAside={true}><StudyCourseContentPage /></DashboardLayout>} />
                         <Route path='/u/planes/aviso_novedades' element={<DashboardLayout hasAside={true}><AdvicesNewsPage /></DashboardLayout>} />
-                        <Route path='/u/recursos' element={
-                            <CurrentGuideContext>
+                        <Route path='/u/recursos' element={ 
                                 <DashboardLayout hasAside={false}>
                                     <ResourcesPage />
-                                </DashboardLayout>
-                            </CurrentGuideContext>}
+                                </DashboardLayout> }
                         />
                         {/* <Route path='/u/recursos/:id' element={<DashboardLayout hasAside={false}><ResourcesPage /></DashboardLayout>} /> */}
-                        <Route path='/u/simulador' element={
-                            <CurrentGuideContext>
+                        <Route path='/u/simulador' element={ 
                                 <DashboardLayout hasAside={false}>
                                     <SimulatorsPage />
-                                </DashboardLayout>
-                            </CurrentGuideContext>
+                                </DashboardLayout> 
                         }
                         />
                         <Route path='/u/documentos' element={<DashboardLayout hasAside={false}><DocumentsPage /></DashboardLayout>} />

@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useState } from 'react'
+import React, { createContext, useState } from 'react'
 
 export const ActualGuideContext = createContext({});
 
@@ -12,9 +12,9 @@ const CurrentGuideContext = (props) => {
         });
     }
 
-    useEffect(()=>{
-        console.log(guideData);
-    }, [guideData])
+    // useEffect(()=>{
+    //     console.log(guideData);
+    // }, [guideData])
 
     return (
         <ActualGuideContext.Provider value={{ guideData, handleGuideSelector }}>

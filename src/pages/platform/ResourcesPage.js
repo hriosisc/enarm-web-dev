@@ -14,6 +14,7 @@ const ResourcesPage = () => {
                 <ResourceContainerData
                     title={guideData.label}
                     guide={guideData.pos}
+                    hasHead={true}
                 />
             </div>
         </div>
